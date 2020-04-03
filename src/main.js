@@ -1,0 +1,48 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+
+import './assets/js/config.js'
+import store from './assets/js/store'
+
+import {
+    formatDate
+} from './assets/js/filter.js';
+
+Vue.filter('formatDate', formatDate);
+
+//element 时间选择器
+import {
+    Button,
+    Row,
+    Col,
+    Message,
+    Icon
+} from 'element-ui';
+
+//echart 主题文件
+import 'echarts/theme/macarons.js'
+
+//全局样式
+import './assets/css/common.less'
+
+Vue.config.productionTip = false
+Vue.use(Button);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Icon);
+
+Vue.prototype.$message = Message;
+
+/* eslint-disable no-new */
+new Vue({
+    el: '#app',
+    router,
+    store,
+    template: '<App/>',
+    components: {
+        App
+    }
+})

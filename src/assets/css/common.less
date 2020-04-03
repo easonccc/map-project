@@ -1,0 +1,267 @@
+//全局公共样式
+
+/*css reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    user-select: none;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+html {
+    font-size: 14px;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+//常用class
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.clear-fix {
+    &:before {
+        content: '';
+        display: table;
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+//一级组件content容器样式
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-sizing: border-box;
+    >.body{
+        padding: 10px;
+        flex: 1;
+    }
+}
+
+//box公共属性
+.header {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1000000;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: rgba(1, 104, 185, 0.2);
+    border: 2px solid #0068BA;
+    // box-shadow: #0068BA 0 0 2px 1px; //边框阴影
+    border-radius: 2px;
+    &-head {
+        height: 50px;
+        line-height: 50px;
+        font-size: 26px;
+        color: #2ED9FD;
+        padding: 0 15px;
+        .dot {
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: #2ED9FD;
+            position: relative;
+            top: 4px;
+            margin-right: 10px;
+        }
+        .ceil {
+            font-size: 14px;
+            color: #fff;
+        }
+        .time {
+            float: right;
+            color: #aaa;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        i {
+            margin-left: 20px;
+            font-size: 24px;
+            color: #2ED9FD;
+
+            cursor: pointer;
+            &.active {
+                color: #fff;
+            }
+        }
+    }
+    &-body {
+        flex: 1;
+        box-sizing: border-box;
+    }
+}
+
+//边框留空
+.well {
+    padding: 10px;
+}
+
+@media (max-width: 1800px) {
+    .box-head {
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .box-head {
+        font-size: 20px;
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+.amap-logo {
+    display: none !important;
+}
+
+.amap-copyright {
+    display: none !important;
+}
+.el-button--primary{
+    background-color: #0B5881;
+    border-color: #0B5881;
+    &:hover{
+        background-color:lighten(#0B5881,15%);
+    }
+}

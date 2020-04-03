@@ -1,0 +1,14 @@
+copyright:
+  code: "01"
+  name: "吴江旅游局"
+  shotname: "吴江"
+  organname: "湖北智旅云"
+  loginurl: "http://114.218.158.176:9090/login.html"
+  tiele: "智慧旅游综合运营平台"
+  logo:
+    client: "http://114.218.158.176:9090/logoImg/wjClientLogo.png"
+    platform: "http://114.218.158.176:9090/logoImg/wjPlatformLogo.png"
+    organ: "http://114.218.158.176:9090/logoImg/wjOrganLogo.png"
+  screen:
+    logo: "http://114.218.158.176:9090/logoImg/wjScreenLogo.png"
+    title: "吴江旅游数据中心"
