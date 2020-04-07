@@ -22,7 +22,7 @@ export default {
             device: null,
             config: {
                 name: "video",
-                type: "video",
+                type: "visual",
                 listTitle: "设备总数"
             },
             send: [
@@ -44,11 +44,12 @@ export default {
     },
     methods: {
         getData() {
-            let url = `static/data/commandVedio.json`;
+            let url = `static/data/visual.json`;
             $http.get(url).then(res => {
                 var d = res.data;
                 this.device = d;
             });
+            console.log(this.device);
         }
     }
 };

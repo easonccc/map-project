@@ -24,7 +24,6 @@ export default {};
 <style scoped lang="less">
 .header {
     position: fixed;
-
     top: 40px;
     left: 50%;
     transform: translateX(-50%);

@@ -1,0 +1,132 @@
+[{
+        "name": "设备总数",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "视频监控设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 36,
+        "heigh": 687,
+        "portrait": 10
+    },
+    {
+        "name": "智能广播设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 24,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "智能照明设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 56,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "智能停车场",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 6,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "智慧导视设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 2,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "无线wifi设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 16,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "环境监测设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 8,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "垃圾桶监测设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 12,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "井盖监测设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 66,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "防火报警设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 54,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "自助报警设备",
+        "location": [111.343811, 25.273539],
+        "id": 1,
+        "code": 1,
+        "type": "visual",
+        "num": 18,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    }
+]
