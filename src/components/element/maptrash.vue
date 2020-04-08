@@ -3,17 +3,17 @@
         <div class="right">
             <div class="message">
                 <div class="title">
-                    <span>无线WIFI</span>
+                    <span>垃圾桶监测</span>
                 </div>
                 <div class="msg_content">
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>无线WIFI</td>
+                            <td>智慧垃圾桶</td>
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>AP</td>
+                            <td>智能</td>
                         </tr>
                         <tr>
                             <td>位置信息</td>
@@ -43,9 +43,7 @@
                     <div class="shutdown">关机</div>
                     <div class="controlled">可控</div>
                 </div>
-                <div class="video_content">
-                    当前接入：<span id="num">86</span> 人
-                </div>
+                <div class="video_content">是否已满: <span>否</span></div>
             </div>
             <div class="control_btn">
                 启动预案
@@ -138,8 +136,16 @@ export default {};
                 height: 45px;
                 line-height: 45px;
                 padding-left: 5px;
-                #num {
-                    color: #df0b0c;
+                span {
+                    color: #fff;
+                    display: inline-block;
+                    width: 45px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-left: 10px;
+                    background-color: #1caae0;
+                    border-radius: 4px;
                 }
             }
         }

@@ -22,7 +22,8 @@ import {
     Row,
     Col,
     Message,
-    Icon
+    Icon,
+    MessageBox
 } from 'element-ui';
 
 //echart 主题文件
@@ -30,12 +31,14 @@ import 'echarts/theme/macarons.js'
 
 //全局样式
 import './assets/css/common.less'
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
 Vue.use(Button);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Icon);
+Vue.use(MessageBox)
 
 Vue.prototype.$message = Message;
 

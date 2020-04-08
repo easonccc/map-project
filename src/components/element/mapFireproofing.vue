@@ -3,17 +3,17 @@
         <div class="right">
             <div class="message">
                 <div class="title">
-                    <span>无线WIFI</span>
+                    <span>防火监测</span>
                 </div>
                 <div class="msg_content">
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>无线WIFI</td>
+                            <td>防火智慧消防栓</td>
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>AP</td>
+                            <td>智慧消防栓</td>
                         </tr>
                         <tr>
                             <td>位置信息</td>
@@ -41,10 +41,12 @@
                 <div class="video_title">
                     <div class="working">工作中</div>
                     <div class="shutdown">关机</div>
-                    <div class="controlled">可控</div>
                 </div>
                 <div class="video_content">
-                    当前接入：<span id="num">86</span> 人
+                    <!-- 水位的盒子 -->
+                    <div class="level"></div>
+                    <!-- 水压 -->
+                    <div class="pressure"></div>
                 </div>
             </div>
             <div class="control_btn">
@@ -135,11 +137,18 @@ export default {};
                 }
             }
             .video_content {
-                height: 45px;
-                line-height: 45px;
-                padding-left: 5px;
-                #num {
-                    color: #df0b0c;
+                .level {
+                    height: 200px;
+                    &::before {
+                        content: "水位:";
+                    }
+                    margin-bottom: 10px;
+                }
+                .pressure {
+                    height: 200px;
+                    &::before {
+                        content: "水压:";
+                    }
                 }
             }
         }

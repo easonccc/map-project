@@ -1,4 +1,5 @@
 <template>
+    <!-- 数字广播页面 -->
     <div class="content">
         <div class="header">
             <v-header />
@@ -6,7 +7,7 @@
         </div>
         <div class="body">
             <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapWifi></v-mapWifi>
+            <v-mapBroadcasting></v-mapBroadcasting>
         </div>
     </div>
 </template>
@@ -15,10 +16,10 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapWifi from "./element/mapWifi";
+import mapBroadcasting from "./element/mapbroadcasting";
 
 export default {
-    name: "monitoring",
+    name: "broadcasting",
     data() {
         return {
             device: null,
@@ -40,7 +41,7 @@ export default {
         "v-loader": loader,
         "v-comamndMap": comamndMap,
         "v-tips": tips,
-        "v-mapWifi": mapWifi
+        "v-mapBroadcasting": mapBroadcasting
     },
     created() {
         this.getData();

@@ -3,17 +3,17 @@
         <div class="right">
             <div class="message">
                 <div class="title">
-                    <span>无线WIFI</span>
+                    <span>井盖监测</span>
                 </div>
                 <div class="msg_content">
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>无线WIFI</td>
+                            <td>管理井盖</td>
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>AP</td>
+                            <td>管路</td>
                         </tr>
                         <tr>
                             <td>位置信息</td>
@@ -43,8 +43,16 @@
                     <div class="shutdown">关机</div>
                     <div class="controlled">可控</div>
                 </div>
-                <div class="video_content">
-                    当前接入：<span id="num">86</span> 人
+            </div>
+            <!-- 管路信息 -->
+            <div class="pipeline">
+                <div class="pipeline_content">
+                    <table>
+                        <tr v-for="(item, index) in pipelineList" :key="index">
+                            <td>{{ item.name }}:</td>
+                            <td>{{ item.num }}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="control_btn">
@@ -55,7 +63,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            pipelineList: [
+                { name: "管路流通物", num: "自来水" },
+                { name: "管路流量", num: "2.5L/s" },
+                { name: "管路压力", num: "0.28MPa" },
+                { name: "管路流向", num: "向北" }
+            ]
+        };
+    }
+};
 </script>
 
 <style scoped lang="less">
@@ -110,6 +129,7 @@ export default {};
             padding-top: 9px;
             border-top: 2px solid rgba(58, 181, 233, 1);
             .video_title {
+                padding-left: 10px;
                 height: 40px;
                 display: flex;
                 flex-direction: row;
@@ -134,12 +154,27 @@ export default {};
                     margin-right: 4px;
                 }
             }
-            .video_content {
-                height: 45px;
-                line-height: 45px;
-                padding-left: 5px;
-                #num {
-                    color: #df0b0c;
+        }
+        .pipeline {
+            background-color: rgba(0, 0, 0, 0.6);
+            .pipeline_title {
+                height: 40px;
+                line-height: 40px;
+                padding-left: 10px;
+            }
+
+            .pipeline_content {
+                table {
+                    tr {
+                        td {
+                            height: 30px;
+                            &:first-child {
+                                width: 100px;
+                                text-align: right;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }

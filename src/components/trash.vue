@@ -6,7 +6,7 @@
         </div>
         <div class="body">
             <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapWifi></v-mapWifi>
+            <v-maptrash></v-maptrash>
         </div>
     </div>
 </template>
@@ -15,7 +15,7 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapWifi from "./element/mapWifi";
+import maptrash from "./element/maptrash";
 
 export default {
     name: "monitoring",
@@ -40,7 +40,7 @@ export default {
         "v-loader": loader,
         "v-comamndMap": comamndMap,
         "v-tips": tips,
-        "v-mapWifi": mapWifi
+        "v-maptrash": maptrash
     },
     created() {
         this.getData();

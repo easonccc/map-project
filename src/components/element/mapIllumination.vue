@@ -3,24 +3,22 @@
         <div class="right">
             <div class="message">
                 <div class="title">
-                    <span>无线WIFI</span>
+                    <span>智能照明</span>
                 </div>
                 <div class="msg_content">
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>无线WIFI</td>
+                            <td>可控制节能路灯</td>
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>AP</td>
+                            <td>智能</td>
                         </tr>
                         <tr>
                             <td>位置信息</td>
                             <td class="desc">
-                                <div class="roughly">
-                                    木鱼镇游客服务中心正面
-                                </div>
+                                <div class="roughly">神农顶风景区售票广场</div>
                                 <div class="j">经:876.37749</div>
                                 <span class="w">纬:654.98789</span>
                                 <span
@@ -43,8 +41,19 @@
                     <div class="shutdown">关机</div>
                     <div class="controlled">可控</div>
                 </div>
-                <div class="video_content">
-                    当前接入：<span id="num">86</span> 人
+                <div class="video_content"></div>
+            </div>
+            <!-- 控制区域 -->
+            <div class="control">
+                <div class="control_title">
+                    <span>控制列表</span>
+                </div>
+                <div class="control_content">
+                    <div class="control_time">2020年02月18日 12:00:00</div>
+                    <div class="control_time">2020年02月18日 12:00:00</div>
+                    <div class="control_time">2020年02月18日 12:00:00</div>
+                    <div class="control_time">2020年02月18日 12:00:00</div>
+                    <div class="control_time">2020年02月18日 12:00:00</div>
                 </div>
             </div>
             <div class="control_btn">
@@ -134,12 +143,30 @@ export default {};
                     margin-right: 4px;
                 }
             }
-            .video_content {
-                height: 45px;
-                line-height: 45px;
-                padding-left: 5px;
-                #num {
-                    color: #df0b0c;
+        }
+        .control {
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-top: 5px;
+            .control_title {
+                height: 31px;
+                width: 297px;
+                background-color: rgba(0, 0, 0, 0.6);
+                background: url(../../assets/img/monitoring/title_background.png);
+                span {
+                    display: inline-block;
+                    padding: 10px 0 0 20px;
+                }
+            }
+
+            .control_content {
+                .control_time {
+                    padding-left: 10px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-bottom: 1px solid #000;
+                    &:hover {
+                        background: rgba(55, 168, 216, 0.6);
+                    }
                 }
             }
         }
@@ -147,7 +174,7 @@ export default {};
             margin-top: 10px;
             cursor: pointer;
             height: 40px;
-            width: 100%;
+            width: 296px;
             background: rgba(24, 181, 240, 1);
             opacity: 0.9;
             color: #fff;
