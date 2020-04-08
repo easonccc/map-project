@@ -1,0 +1,4 @@
+/*公共变量*/
+.clear-fix {
+  clear: both;
+}

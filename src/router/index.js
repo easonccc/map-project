@@ -10,6 +10,9 @@ import event from '@/components/event'
 import event1 from '@/components/event/event1'
 import event2 from '@/components/event/event2'
 
+// 引入智能监控
+import monitoring from '@/components/monitoring.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +24,11 @@ export default new Router({
             path: '/video',
             name: 'video',
             component: video
+        },
+        {
+            path: '/monitoring',
+            name: 'monitoring',
+            component: monitoring
         },
         {
             path: '/visitor',
@@ -45,16 +53,15 @@ export default new Router({
         {
             path: '/event',
             component: event,
-            children:[{
+            children: [{
                 path: 'event1',
                 name: 'event1',
                 component: event1,
             }, {
-                    path: 'event2',
-                    name: 'event2',
-                    component: event2,
-                }
-            ]
+                path: 'event2',
+                name: 'event2',
+                component: event2,
+            }]
         },
     ]
 })

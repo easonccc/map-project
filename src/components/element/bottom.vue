@@ -1,0 +1,174 @@
+<template>
+    <!-- 底部导航区域 -->
+    <div class="box-bottom">
+        <div class="title">
+            物联管理
+        </div>
+        <div class="content">
+            <swiper ref="mySwiper" :options="swiperOptions">
+                <swiper-slide>
+                    <img src="../../assets/img/visual/all.png" alt="" />
+                    <div class="text">全部</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img
+                        src="../../assets/img/visual/surveillance.png"
+                        alt=""
+                    />
+                    <div class="text">监控</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../assets/img/visual/broadcast.png" alt="" />
+                    <div class="text">广播</div></swiper-slide
+                >
+                <swiper-slide>
+                    <img src="../../assets/img/visual/lamp.png" alt="" />
+                    <div class="text">照明</div></swiper-slide
+                >
+                <swiper-slide>
+                    <img src="../../assets/img/visual/park.png" alt="" />
+                    <div class="text">停车场</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../assets/img/visual/guide.png" alt="" />
+                    <div class="text">导视</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../assets/img/visual/wifi.png" alt="" />
+                    <div class="text">WIFI</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../assets/img/visual/wifi.png" alt="" />
+                    <div class="text">WIFI</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../assets/img/visual/wifi.png" alt="" />
+                    <div class="text">WIFI</div>
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="../../assets/img/visual/wifi.png" alt="" />
+                    <div class="text">WIFI</div>
+                </swiper-slide>
+                <!-- 如果需要分页器 -->
+                <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+            </swiper>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!--  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div
+                            v-for="(el, index) in arrItem"
+                            :key="index"
+                            class="swiper-slide"
+                        >
+                            <img class="img" :src="el.imgUrl" />
+                        </div>
+                    </div> -->
+        </div>
+    </div>
+</template>
+
+<script>
+import { Swiper, SwiperSlide, directive, Pagination } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+export default {
+    name: "bottom",
+    data() {
+        return {
+            swiperOptions: {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+                // spaceBetween: 0,
+                // virtual: true,
+                // 不循环
+                loop: false,
+                // observer: true,
+                // 显示条数
+                slidesPerView: 7
+                // observeParents: true
+            }
+        };
+    },
+    components: {
+        Swiper,
+        SwiperSlide
+    }
+};
+</script>
+
+<style scoped lang="less">
+@import "../../assets/css/mixin.less";
+.box-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    background: url(../../assets/img/bottom.png);
+    height: 127px;
+    width: 607px;
+    .title {
+        color: #99efff;
+        font-size: 18px;
+        line-height: 52px;
+        margin-left: 38px;
+    }
+    .content {
+        margin: auto;
+        width: 516px;
+
+        .swiper-container {
+            width: 516px !important;
+            overflow: hidden;
+        }
+        .swiper {
+            overflow: hidden;
+            &-slide {
+                // width: 30px; /*设为固定值*/
+                // width: auto; /*根据内容调整宽度*/
+                img {
+                    margin: 0 0 10px 5px;
+                }
+                .text {
+                    padding: 0 2px;
+                    font-size: 12px;
+                    width: 45px;
+                    height: 20px;
+                    background: rgba(153, 239, 255, 0.4);
+                    border: 1px solid rgba(153, 239, 255, 1);
+                    border-radius: 10px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: #99efff;
+                }
+            }
+        }
+    }
+
+    .swiper-button-prev {
+        height: 34px;
+        width: 22px;
+        // background: url(../../assets/img/visual/prop.png);
+        transform: scale(0.7, 0.7);
+        position: absolute;
+        color: #99efff;
+        left: -30px;
+        top: 26%;
+    }
+    .swiper-button-next {
+        height: 34px;
+        width: 22px;
+        // background: url(../../assets/img/visual/next.png);
+        color: #99efff;
+        position: absolute;
+        transform: scale(0.7, 0.7);
+        right: -22px;
+        top: 26%;
+    }
+}
+.swiper-wrapper {
+    width: 550px;
+}
+</style>
