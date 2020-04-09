@@ -193,8 +193,10 @@ export default {
 
 <style lang="less" scoped>
 .epidemic {
-    margin-top: 101px;
-    padding: 0 50px;
+    background: #0f3b4c;
+    height: 100%;
+    padding: 200px 50px 0;
+
     .epidemic_title {
         display: flex;
         flex-direction: row;
@@ -214,7 +216,9 @@ export default {
     .epidemic_content {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         .front {
+            flex: 1;
             .front_title {
                 img {
                 }
@@ -228,11 +232,19 @@ export default {
                     flex: 1;
                     margin-right: 10px;
                     table {
+                        width: 100%;
+                        border-collapse: collapse;
                         tr {
+                            display: inline-block;
+                            text-align: center;
                             height: 40px;
                             line-height: 40px;
-                            border: 1px solid #000;
+                            // width: 100%;
+                            // border: 1px solid #000;
+                            margin: 2px 0;
                             td {
+                                border: 1px solid #ccc;
+                                padding: 5px;
                             }
                         }
                     }

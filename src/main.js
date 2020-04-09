@@ -23,7 +23,9 @@ import {
     Col,
     Message,
     Icon,
-    Input
+    Input,
+    Dialog,
+    Popover
     // MessageBox
 } from 'element-ui';
 
@@ -39,7 +41,9 @@ Vue.use(Button);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Icon);
-Vue.use(Input)
+Vue.use(Input);
+Vue.use(Popover);
+Vue.use(Dialog);
 // Vue.use(MessageBox)
 
 Vue.prototype.$message = Message;

@@ -43,7 +43,7 @@
                     <span>停车场示意图</span>
                     <img src="../../assets/img/park/maximize.png" alt="" />
                 </div>
-                <div class="park_img_thum" @click.stop="showMessageBox">
+                <div class="park_img_thum" @click="showDialog">
                     <img src="../../assets/img/park/park_thum.png" alt="" />
                 </div>
                 <!-- 停车场的视屏录像 -->
@@ -76,42 +76,30 @@
                 启动预案
             </div>
         </div>
+        <div class="myDialog">
+            <v-dialog v-show="isDialogVisible" @close="closeDialog"></v-dialog>
+        </div>
     </div>
 </template>
 
 <script>
+import dialog from "../event/dialog";
 export default {
+    data() {
+        return {
+            isDialogVisible: false
+        };
+    },
     methods: {
-        showMessageBox() {
-            MessageBox.alert("这是一段内容", "标题名称", {
-                confirmButtonText: "确定",
-                callback: action => {
-                    this.$message({
-                        type: "info",
-                        message: `action: ${action}`
-                    });
-                }
-            });
+        showDialog() {
+            this.isDialogVisible = true;
         },
-        open() {
-            this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                type: "warning"
-            })
-                .then(() => {
-                    this.$message({
-                        type: "success",
-                        message: "删除成功!"
-                    });
-                })
-                .catch(() => {
-                    this.$message({
-                        type: "info",
-                        message: "已取消删除"
-                    });
-                });
+        closeDialog() {
+            this.isDialogVisible = false;
         }
+    },
+    components: {
+        "v-dialog": dialog
     }
 };
 </script>
@@ -185,6 +173,21 @@ export default {
                     }
                 }
             }
+        }
+    }
+    .myDialog {
+        /deeep/ .el-dialog__header {
+            height: 0;
+            padding: 0 !important;
+        }
+        /deep/ .el-dialog__body {
+            padding: 0 !important;
+        }
+        /deep/ .el-dialog__body {
+            width: 1345px;
+            height: 900px;
+            background: url(../../assets/img/park/park_bg.png) no-repeat;
+            background-color: transparent;
         }
     }
 }

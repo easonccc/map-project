@@ -1,5 +1,8 @@
 <template>
     <div class="main">
+        <div class="close">
+            <img src="../../assets/img/组 21 拷贝.png" alt="" />
+        </div>
         <!--右侧导航区域  -->
         <!--  <div class="box-left">
             <div class="device">
@@ -198,6 +201,12 @@ export default {
 
 <style scoped lang="less">
 @import "../../assets/css/mixin.less";
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
 
 .box-left {
     position: absolute;
