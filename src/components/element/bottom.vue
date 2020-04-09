@@ -56,7 +56,7 @@ export default {
                 {
                     name: "全部",
                     src: all,
-                    to: "/video"
+                    to: "/slot"
                 },
                 {
                     name: "监控",
@@ -111,7 +111,7 @@ export default {
                 {
                     name: "自助报警",
                     src: wifi,
-                    to: "/broadcasting"
+                    to: "/alarm"
                 }
             ]
         };

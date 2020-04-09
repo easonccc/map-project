@@ -49,7 +49,7 @@
 import commandList from "./commandList";
 
 import mapModal from "./mapModal";
-import mapVideo from "./mapVideo";
+import mapSlot from "./mapSlot";
 import mapVisitor from "./mapVisitor";
 import mapCar from "./mapCar";
 import mapWifi from "./mapWifi";
@@ -71,7 +71,7 @@ export default {
     components: {
         commandList,
         mapModal,
-        mapVideo,
+        mapSlot,
         mapVisitor,
         mapCar,
         mapWifi,

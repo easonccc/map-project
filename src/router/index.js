@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import video from '@/components/video'
+import slot from '@/components/slot'
 import visitor from '@/components/visitor'
 import car from '@/components/car'
 import wifi from '@/components/wifi'
@@ -10,6 +10,11 @@ import event from '@/components/event'
 import event1 from '@/components/event/event1'
 import event2 from '@/components/event/event2'
 
+
+// 引入登录页面
+import login from '@/components/login'
+// 引入主页面
+import home from '@/components/home'
 // 引入智能监控
 import monitoring from '@/components/monitoring.vue'
 // 引入数字广播
@@ -28,18 +33,25 @@ import trash from '@/components/trash'
 import well from '@/components/well'
 // 引入防火监测
 import fireproofing from '@/components/fireproofing'
+// 引入自助报警
+import alarm from '@/components/alarm'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
             path: '/',
-            redirect: '/video'
+            redirect: '/login'
         },
         {
-            path: '/video',
-            name: 'video',
-            component: video
+            path: '/login',
+            name: 'login',
+            component: login
+        },
+        {
+            path: '/home',
+            name: 'home',
+            component: home
         }, {
             path: '/illumination',
             name: 'illumination',
@@ -86,9 +98,14 @@ export default new Router({
             component: fireproofing
         },
         {
-            path: '/visitor',
-            name: 'visitor',
-            component: visitor
+            path: '/alarm',
+            name: 'alarm',
+            component: alarm
+        },
+        {
+            path: '/slot',
+            name: 'slot',
+            component: slot
         },
         {
             path: '/law',
