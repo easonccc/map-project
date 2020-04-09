@@ -23,7 +23,7 @@ import {
     Col,
     Message,
     Icon,
-    MessageBox
+    // MessageBox
 } from 'element-ui';
 
 //echart 主题文件
@@ -38,7 +38,7 @@ Vue.use(Button);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Icon);
-Vue.use(MessageBox)
+// Vue.use(MessageBox)
 
 Vue.prototype.$message = Message;
 

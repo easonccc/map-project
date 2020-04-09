@@ -6,65 +6,17 @@
         </div>
         <div class="content">
             <swiper ref="mySwiper" :options="swiperOptions">
-                <swiper-slide>
-                    <img src="../../assets/img/visual/all.png" alt="" />
-                    <div class="text">全部</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img
-                        src="../../assets/img/visual/surveillance.png"
-                        alt=""
-                    />
-                    <div class="text">监控</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="../../assets/img/visual/broadcast.png" alt="" />
-                    <div class="text">广播</div></swiper-slide
-                >
-                <swiper-slide>
-                    <img src="../../assets/img/visual/lamp.png" alt="" />
-                    <div class="text">照明</div></swiper-slide
-                >
-                <swiper-slide>
-                    <img src="../../assets/img/visual/park.png" alt="" />
-                    <div class="text">停车场</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="../../assets/img/visual/guide.png" alt="" />
-                    <div class="text">导视</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="../../assets/img/visual/wifi.png" alt="" />
-                    <div class="text">WIFI</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="../../assets/img/visual/wifi.png" alt="" />
-                    <div class="text">WIFI</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="../../assets/img/visual/wifi.png" alt="" />
-                    <div class="text">WIFI</div>
-                </swiper-slide>
-                <swiper-slide>
-                    <img src="../../assets/img/visual/wifi.png" alt="" />
-                    <div class="text">WIFI</div>
+                <swiper-slide v-for="(item, index) in swiperData" :key="index">
+                    <router-link :to="item.to">
+                        <img :src="item.src" alt="" />
+                        <div class="text">{{ item.name }}</div>
+                    </router-link>
                 </swiper-slide>
                 <!-- 如果需要分页器 -->
                 <!-- <div class="swiper-pagination" slot="pagination"></div> -->
             </swiper>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-
-            <!--  <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div
-                            v-for="(el, index) in arrItem"
-                            :key="index"
-                            class="swiper-slide"
-                        >
-                            <img class="img" :src="el.imgUrl" />
-                        </div>
-                    </div> -->
         </div>
     </div>
 </template>
@@ -72,6 +24,16 @@
 <script>
 import { Swiper, SwiperSlide, directive, Pagination } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+
+// 引入js图片
+import all from "../../assets/img/visual/all.png";
+import surveillance from "../../assets/img/visual/surveillance.png";
+import broadcast from "../../assets/img/visual/broadcast.png";
+import lamp from "../../assets/img/visual/lamp.png";
+import park from "../../assets/img/visual/park.png";
+import guide from "../../assets/img/visual/guide.png";
+import wifi from "../../assets/img/visual/wifi.png";
+
 export default {
     name: "bottom",
     data() {
@@ -89,7 +51,69 @@ export default {
                 // 显示条数
                 slidesPerView: 7
                 // observeParents: true
-            }
+            },
+            swiperData: [
+                {
+                    name: "全部",
+                    src: all,
+                    to: "/video"
+                },
+                {
+                    name: "监控",
+                    src: surveillance,
+                    to: "/monitoring"
+                },
+                {
+                    name: "广播",
+                    src: broadcast,
+                    to: "/broadcasting"
+                },
+                {
+                    name: "照明",
+                    src: lamp,
+                    to: "/illumination"
+                },
+                {
+                    name: "停车场",
+                    src: park,
+                    to: "/park"
+                },
+                {
+                    name: "导视",
+                    src: guide,
+                    to: "/guide"
+                },
+                {
+                    name: "WiFi",
+                    src: wifi,
+                    to: "/wifi"
+                },
+                {
+                    name: "环境",
+                    src: wifi,
+                    to: "/environment"
+                },
+                {
+                    name: "垃圾桶信息",
+                    src: wifi,
+                    to: "/trash"
+                },
+                {
+                    name: "井盖信息",
+                    src: wifi,
+                    to: "/well"
+                },
+                {
+                    name: "防火监测",
+                    src: wifi,
+                    to: "/fireproofing"
+                },
+                {
+                    name: "自助报警",
+                    src: wifi,
+                    to: "/broadcasting"
+                }
+            ]
         };
     },
     components: {
