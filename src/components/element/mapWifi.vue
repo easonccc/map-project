@@ -37,17 +37,17 @@
                     </table>
                 </div>
             </div>
-            <div class="video">
-                <div class="video_title">
-                    <div class="working">工作中</div>
+            <div class="working">
+                <div class="working_title">
+                    <div class="status">工作中</div>
                     <div class="shutdown">关机</div>
                     <div class="controlled">可控</div>
                 </div>
-                <div class="video_content">
+                <div class="working_content">
                     当前接入：<span id="num">86</span> 人
                 </div>
             </div>
-            <div class="control_btn">
+            <div class="start_btn">
                 启动预案
             </div>
         </div>
@@ -60,113 +60,15 @@ export default {};
 
 <style scoped lang="less">
 @import "../../assets/css/mixin.less";
+@import "../../assets/css/rightView.less";
 .content {
-    .right {
-        margin-top: 125px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        color: #8fe1f0;
-        font-size: 14px;
-        .message {
-            background-color: rgba(0, 0, 0, 0.6);
-            height: 231px;
-            .title {
-                height: 31px;
-                width: 297px;
-                background: url(../../assets/img/monitoring/title_background.png);
-                span {
-                    display: inline-block;
-                    padding: 10px 0 0 20px;
-                }
-            }
-
-            .msg_content {
-                padding-left: 20px;
-                table {
-                    width: 100%;
-
-                    tr {
-                        height: 30px;
-                        td {
-                            line-height: 30px;
-                            span {
-                                img {
-                                    vertical-align: bottom;
-                                }
-                            }
-                        }
-                    }
-                    .desc {
-                        line-height: 1;
-                    }
-                    margin-top: 20px;
-                }
-            }
-        }
-        .video {
-            background-color: rgba(0, 0, 0, 0.6);
-            margin-top: 5px;
-            padding-top: 9px;
-            border-top: 2px solid rgba(58, 181, 233, 1);
-            .video_title {
-                height: 40px;
-                display: flex;
-                flex-direction: row;
-                .working {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 65px;
-                    height: 26px;
-                    border: 1px solid rgba(123, 204, 250, 1);
-                    border-radius: 6px;
-                    margin: 0 4px 0 2px;
-                }
-
-                div {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 60px;
-                    height: 26px;
-                    border-radius: 6px;
-                    margin-right: 4px;
-                }
-            }
-            .video_content {
-                height: 45px;
-                line-height: 45px;
-                padding-left: 5px;
-                #num {
-                    color: #df0b0c;
-                }
-            }
-        }
-        .control_btn {
-            margin-top: 10px;
-            cursor: pointer;
-            height: 40px;
-            width: 100%;
-            background: rgba(24, 181, 240, 1);
-            opacity: 0.9;
-            color: #fff;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    .working_content {
+        height: 45px;
+        line-height: 45px;
+        padding-left: 5px;
+        #num {
+            color: #df0b0c;
         }
     }
-}
-
-.shutdown {
-    color: #df0b0c;
-    border: 1px solid #df0b0c;
-}
-.controlled {
-    color: #16ea6c;
-    border: 1px solid #16ea6c;
 }
 </style>

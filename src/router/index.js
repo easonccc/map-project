@@ -36,6 +36,14 @@ import fireproofing from '@/components/fireproofing'
 // 引入自助报警
 import alarm from '@/components/alarm'
 
+
+// 引入交通信息
+import traffic from '@/components/traffic'
+
+
+// 引入系统----疫情监测
+import epidemic from '@/components/epidemic'
+
 Vue.use(Router)
 
 export default new Router({
@@ -108,6 +116,15 @@ export default new Router({
             component: slot
         },
         {
+            path: '/traffic',
+            name: 'traffic',
+            component: traffic
+        },
+        {
+            path: '/epidemic',
+            name: 'epidemic',
+            component: epidemic
+        }, {
             path: '/law',
             name: 'law',
             component: law,

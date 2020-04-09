@@ -1,68 +1,64 @@
-.content {
-    .right {
+.right {
         margin-top: 125px;
         position: absolute;
         right: 0;
         top: 0;
         color: #8fe1f0;
         font-size: 14px;
-
-        .message {
+}
+// 第一个 各个模块的信息区域的样式
+.message {
             background-color: rgba(0, 0, 0, 0.6);
             height: 231px;
-
             .title {
                 height: 31px;
                 width: 297px;
                 background: url(../../assets/img/monitoring/title_background.png);
-
                 span {
                     display: inline-block;
                     padding: 10px 0 0 20px;
                 }
             }
 
-            .msg_content {
-                padding-left: 20px;
-
-                table {
-                    width: 100%;
-
-                    tr {
-                        height: 30px;
-
-                        td {
-                            line-height: 30px;
-
-                            span {
-                                img {
-                                    vertical-align: bottom;
-                                }
-                            }
-                        }
-                    }
-
-                    .desc {
-                        line-height: 1;
-                    }
-
-                    margin-top: 20px;
-                }
-            }
         }
+.msg_content {
+             padding-left: 20px;
 
-        .video {
+             table {
+                 width: 100%;
+
+                 tr {
+                     height: 30px;
+
+                     td {
+                         line-height: 30px;
+
+                         span {
+                             img {
+                                 vertical-align: bottom;
+                             }
+                         }
+                     }
+                 }
+
+                 .desc {
+                     line-height: 1;
+                 }
+
+                 margin-top: 20px;
+             }
+         }
+// 工作状态的样式
+.working {
             background-color: rgba(0, 0, 0, 0.6);
             margin-top: 5px;
             padding-top: 9px;
             border-top: 2px solid rgba(58, 181, 233, 1);
-
-            .video_title {
+            .working_title {
                 height: 40px;
                 display: flex;
                 flex-direction: row;
-
-                .working {
+                .status {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -72,7 +68,6 @@
                     border-radius: 6px;
                     margin: 0 4px 0 2px;
                 }
-
                 div {
                     display: flex;
                     justify-content: center;
@@ -83,153 +78,69 @@
                     margin-right: 4px;
                 }
             }
-
-            .video_content {
-                img {}
-            }
         }
-
-        .playback {
+// 列表的样式
+.list {
             background-color: rgba(0, 0, 0, 0.6);
             margin-top: 5px;
-            padding-top: 9px;
-            border-top: 2px solid rgba(58, 181, 233, 1);
 
-            .playback_title {
+            .list_title {
                 padding-left: 10px;
-
-                span {
+                span.real {
                     float: right;
                     padding-right: 10px;
                     color: #ea9e16;
                 }
             }
-
-            .playback_content {
-                .playback_time {
+            .list_content {
+                .list_time {
                     padding-left: 10px;
                     height: 30px;
                     line-height: 30px;
                     border-bottom: 1px solid #000;
-
                     &:hover {
                         background: rgba(55, 168, 216, 0.6);
                     }
                 }
             }
-
-            .playback_footer {
-                padding-left: 10px;
-                height: 30px;
-                line-height: 30px;
-
-                img {
-                    margin-left: 4px;
-                    cursor: pointer;
-                }
-
-                .two {
-                    color: #ee0f10;
-                }
-
-                span {
-                    margin-left: 10px;
-                    color: #fff;
-                    cursor: pointer;
-                }
-            }
         }
+ .list_footer {
+     padding-left: 10px;
+     height: 30px;
+     line-height: 30px;
 
-        .control {
+     img {
+         margin-left: 4px;
+         cursor: pointer;
+     }
+
+     .two {
+         color: #ee0f10;
+     }
+
+     span {
+         margin-left: 10px;
+         color: #fff;
+         cursor: pointer;
+     }
+ }
+
+.control {
             background-color: rgba(0, 0, 0, 0.6);
             margin-top: 5px;
-
             .control_title {
                 height: 31px;
                 width: 297px;
                 background-color: rgba(0, 0, 0, 0.6);
                 background: url(../../assets/img/monitoring/title_background.png);
-
                 span {
                     display: inline-block;
                     padding: 10px 0 0 20px;
                 }
             }
-
-            .control_content {
-                width: 297px;
-                display: flex;
-                flex-direction: row;
-
-                .content_left {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    &>div {
-                        border: 1px solid #000;
-                        height: 70px;
-                        width: 75px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        &:first-child {
-                            border-bottom: none;
-                        }
-
-                        img {
-                            margin-bottom: 6px;
-                        }
-
-                        div {}
-                    }
-                }
-
-                .control_center {
-                    border-top: 1px solid #000;
-                    border-bottom: 1px solid #000;
-                    flex: 2;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {}
-                }
-
-                .control_right {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-
-                    &>div {
-                        border: 1px solid #000;
-
-                        &:first-child {
-                            border-bottom: none;
-                        }
-
-                        height: 70px;
-                        width: 75px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        img {
-                            margin-bottom: 6px;
-                        }
-
-                        div {}
-                    }
-                }
-            }
         }
-
-        .control_btn {
+// 启动预案按钮样式
+.start_btn {
             margin-top: 10px;
             cursor: pointer;
             height: 40px;
@@ -244,15 +155,30 @@
             justify-content: center;
             align-items: center;
         }
-    }
-}
-
 .shutdown {
     color: #df0b0c;
     border: 1px solid #df0b0c;
 }
-
 .controlled {
     color: #16ea6c;
     border: 1px solid #16ea6c;
 }
+// 不带背景图的标题
+.top-line{
+ padding-top: 9px;
+ padding-left: 10px;
+ border-top: 2px solid rgba(58, 181, 233, 1);
+}
+// 有背景图的标题
+.has_bgImg {
+     height: 31px;
+     width: 297px;
+     background-color: rgba(0, 0, 0, 0.6);
+     background: url(../../assets/img/monitoring/title_background.png);
+
+     span {
+         display: inline-block;
+         padding: 10px 0 0 20px;
+     }
+}
+

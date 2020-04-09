@@ -1,4 +1,4 @@
-.content .right {
+.right {
   margin-top: 125px;
   position: absolute;
   right: 0;
@@ -6,50 +6,50 @@
   color: #8fe1f0;
   font-size: 14px;
 }
-.content .right .message {
+.message {
   background-color: rgba(0, 0, 0, 0.6);
   height: 231px;
 }
-.content .right .message .title {
+.message .title {
   height: 31px;
   width: 297px;
   background: url(../../assets/img/monitoring/title_background.png);
 }
-.content .right .message .title span {
+.message .title span {
   display: inline-block;
   padding: 10px 0 0 20px;
 }
-.content .right .message .msg_content {
+.msg_content {
   padding-left: 20px;
 }
-.content .right .message .msg_content table {
+.msg_content table {
   width: 100%;
   margin-top: 20px;
 }
-.content .right .message .msg_content table tr {
+.msg_content table tr {
   height: 30px;
 }
-.content .right .message .msg_content table tr td {
+.msg_content table tr td {
   line-height: 30px;
 }
-.content .right .message .msg_content table tr td span img {
+.msg_content table tr td span img {
   vertical-align: bottom;
 }
-.content .right .message .msg_content table .desc {
+.msg_content table .desc {
   line-height: 1;
 }
-.content .right .video {
+.working {
   background-color: rgba(0, 0, 0, 0.6);
   margin-top: 5px;
   padding-top: 9px;
   border-top: 2px solid #3ab5e9;
 }
-.content .right .video .video_title {
+.working .working_title {
   height: 40px;
   display: flex;
   flex-direction: row;
 }
-.content .right .video .video_title .working {
+.working .working_title .status {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@
   border-radius: 6px;
   margin: 0 4px 0 2px;
 }
-.content .right .video .video_title div {
+.working .working_title div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,116 +68,59 @@
   border-radius: 6px;
   margin-right: 4px;
 }
-.content .right .playback {
+.list {
   background-color: rgba(0, 0, 0, 0.6);
   margin-top: 5px;
-  padding-top: 9px;
-  border-top: 2px solid #3ab5e9;
 }
-.content .right .playback .playback_title {
+.list .list_title {
   padding-left: 10px;
 }
-.content .right .playback .playback_title span {
+.list .list_title span.real {
   float: right;
   padding-right: 10px;
   color: #ea9e16;
 }
-.content .right .playback .playback_content .playback_time {
+.list .list_content .list_time {
   padding-left: 10px;
   height: 30px;
   line-height: 30px;
   border-bottom: 1px solid #000;
 }
-.content .right .playback .playback_content .playback_time:hover {
+.list .list_content .list_time:hover {
   background: rgba(55, 168, 216, 0.6);
 }
-.content .right .playback .playback_footer {
+.list_footer {
   padding-left: 10px;
   height: 30px;
   line-height: 30px;
 }
-.content .right .playback .playback_footer img {
+.list_footer img {
   margin-left: 4px;
   cursor: pointer;
 }
-.content .right .playback .playback_footer .two {
+.list_footer .two {
   color: #ee0f10;
 }
-.content .right .playback .playback_footer span {
+.list_footer span {
   margin-left: 10px;
   color: #fff;
   cursor: pointer;
 }
-.content .right .control {
+.control {
   background-color: rgba(0, 0, 0, 0.6);
   margin-top: 5px;
 }
-.content .right .control .control_title {
+.control .control_title {
   height: 31px;
   width: 297px;
   background-color: rgba(0, 0, 0, 0.6);
   background: url(../../assets/img/monitoring/title_background.png);
 }
-.content .right .control .control_title span {
+.control .control_title span {
   display: inline-block;
   padding: 10px 0 0 20px;
 }
-.content .right .control .control_content {
-  width: 297px;
-  display: flex;
-  flex-direction: row;
-}
-.content .right .control .control_content .content_left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .right .control .control_content .content_left > div {
-  border: 1px solid #000;
-  height: 70px;
-  width: 75px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .right .control .control_content .content_left > div:first-child {
-  border-bottom: none;
-}
-.content .right .control .control_content .content_left > div img {
-  margin-bottom: 6px;
-}
-.content .right .control .control_content .control_center {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.content .right .control .control_content .control_right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.content .right .control .control_content .control_right > div {
-  border: 1px solid #000;
-  height: 70px;
-  width: 75px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .right .control .control_content .control_right > div:first-child {
-  border-bottom: none;
-}
-.content .right .control .control_content .control_right > div img {
-  margin-bottom: 6px;
-}
-.content .right .control_btn {
+.start_btn {
   margin-top: 10px;
   cursor: pointer;
   height: 40px;
@@ -199,4 +142,19 @@
 .controlled {
   color: #16ea6c;
   border: 1px solid #16ea6c;
+}
+.top-line {
+  padding-top: 9px;
+  padding-left: 10px;
+  border-top: 2px solid #3ab5e9;
+}
+.has_bgImg {
+  height: 31px;
+  width: 297px;
+  background-color: rgba(0, 0, 0, 0.6);
+  background: url(../../assets/img/monitoring/title_background.png);
+}
+.has_bgImg span {
+  display: inline-block;
+  padding: 10px 0 0 20px;
 }

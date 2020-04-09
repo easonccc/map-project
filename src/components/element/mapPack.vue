@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="control_btn">
+            <div class="start_btn">
                 启动预案
             </div>
         </div>
@@ -118,148 +118,74 @@ export default {
 
 <style scoped lang="less">
 @import "../../assets/css/mixin.less";
+@import "../../assets/css/rightView.less";
 .content {
-    .right {
-        margin-top: 125px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        color: #8fe1f0;
-        font-size: 14px;
-        .message {
-            background-color: rgba(0, 0, 0, 0.6);
-            height: 231px;
-            .title {
-                height: 31px;
-                width: 297px;
-                background: url(../../assets/img/monitoring/title_background.png);
-                span {
-                    display: inline-block;
-                    padding: 10px 0 0 20px;
-                }
-            }
-
-            .msg_content {
-                padding-left: 20px;
-                table {
-                    width: 100%;
-
-                    tr {
-                        height: 30px;
-                        td {
-                            line-height: 30px;
-                            span {
-                                img {
-                                    vertical-align: bottom;
-                                }
-                            }
-                        }
-                    }
-                    .desc {
-                        line-height: 1;
-                    }
-                    margin-top: 20px;
-                }
-            }
-        }
-        .park_pic {
-            margin-top: 10px;
-            border-top: 2px solid rgba(58, 181, 233, 1);
-            background-color: rgba(0, 0, 0, 0.6);
-            .park_pic_title {
-                height: 40px;
-                line-height: 40px;
-                font-size: 14px;
-
-                span {
-                    padding-left: 10px;
-                }
-
-                img {
-                    float: right;
-                    margin: 10px 20px 0 0;
-                }
-            }
-
-            .park_img_thum {
-                padding-left: 10px;
-                img {
-                }
-            }
-
-            .park_video {
-                margin-top: 10px;
-                display: flex;
-                & > div {
-                    border: 1px solid rgba(0, 0, 0, 1);
-                    .video_content {
-                        height: 114px;
-                        width: 148px;
-                        background-color: #fff;
-                        &::before {
-                            content: "入口";
-                        }
-                    }
-
-                    .video_msg {
-                        display: flex;
-                        div {
-                            width: 74px;
-                            height: 32px;
-                            border: 1px solid rgba(0, 0, 0, 1);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                        .normal {
-                            color: #10b1ed;
-                        }
-
-                        .jam {
-                            color: #df0b0c;
-                        }
-                    }
-
-                    .video_state {
-                        height: 32px;
-                        padding: 0 10px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        span {
-                            background-color: #f50502;
-                            width: 30px;
-                            height: 20px;
-                            line-height: 20px;
-                        }
-                    }
-                }
-            }
-        }
-        .control_btn {
-            margin-top: 10px;
-            cursor: pointer;
+    .park_pic {
+        margin-top: 10px;
+        border-top: 2px solid rgba(58, 181, 233, 1);
+        background-color: rgba(0, 0, 0, 0.6);
+        .park_pic_title {
             height: 40px;
-            width: 100%;
-            background: rgba(24, 181, 240, 1);
-            opacity: 0.9;
-            color: #fff;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
+            line-height: 40px;
+            font-size: 14px;
+            span {
+                padding-left: 10px;
+            }
+            img {
+                float: right;
+                margin: 10px 20px 0 0;
+            }
+        }
+        .park_img_thum {
+            padding-left: 10px;
+        }
+        .park_video {
+            margin-top: 10px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            & > div {
+                border: 1px solid rgba(0, 0, 0, 1);
+                .video_content {
+                    height: 114px;
+                    width: 148px;
+                    background-color: #fff;
+                    &::before {
+                        content: "入口";
+                    }
+                }
+                .video_msg {
+                    display: flex;
+                    div {
+                        width: 74px;
+                        height: 32px;
+                        border: 1px solid rgba(0, 0, 0, 1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .normal {
+                        color: #10b1ed;
+                    }
+
+                    .jam {
+                        color: #df0b0c;
+                    }
+                }
+
+                .video_state {
+                    height: 32px;
+                    padding: 0 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span {
+                        background-color: #f50502;
+                        width: 30px;
+                        height: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
         }
     }
-}
-
-.shutdown {
-    color: #df0b0c;
-    border: 1px solid #df0b0c;
-}
-.controlled {
-    color: #16ea6c;
-    border: 1px solid #16ea6c;
 }
 </style>
