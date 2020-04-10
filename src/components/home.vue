@@ -66,7 +66,7 @@ export default {
         },
         goCity() {
             this.$router.push({
-                path: "/slot",
+                path: "/city",
                 query: {
                     type: "city"
                 }

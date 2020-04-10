@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import slot from '@/components/slot'
-import visitor from '@/components/visitor'
+// import visitor from '@/components/visitor'
 import car from '@/components/car'
 import wifi from '@/components/wifi'
 import law from '@/components/law'
@@ -37,9 +37,12 @@ import fireproofing from '@/components/fireproofing'
 import alarm from '@/components/alarm'
 
 
+// 引入智慧城市
+import city from '@/components/city.vue'
 // 引入交通信息
 import traffic from '@/components/traffic'
-
+// 引入车辆
+import vehicle from '@/components/vehicle'
 
 // 引入系统----疫情监测
 import epidemic from '@/components/epidemic'
@@ -121,6 +124,11 @@ export default new Router({
             component: traffic
         },
         {
+            path: '/vehicle',
+            name: 'vehicle',
+            component: vehicle
+        },
+        {
             path: '/epidemic',
             name: 'epidemic',
             component: epidemic
@@ -133,6 +141,11 @@ export default new Router({
             path: '/wifi',
             name: 'wifi',
             component: wifi,
+        },
+        {
+            path: '/city',
+            name: 'city',
+            component: city
         },
         {
             path: '/car',

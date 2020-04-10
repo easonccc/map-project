@@ -6,7 +6,7 @@
         </div>
         <div class="body">
             <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapMonitoring></v-mapMonitoring>
+            <v-mapMonitoring :msgData="msgData"></v-mapMonitoring>
         </div>
     </div>
 </template>
@@ -32,7 +32,8 @@ export default {
                 { title: "天燕景区道路损坏需要立即维修" },
                 { title: "神农坛景区出现火灾预警" },
                 { title: "神农坛景区出现火灾预警" }
-            ]
+            ],
+            msgData: null
         };
     },
     components: {
@@ -44,6 +45,7 @@ export default {
     },
     created() {
         this.getData();
+        this.getMsgData();
     },
     methods: {
         getData() {
@@ -53,6 +55,13 @@ export default {
                 this.device = d;
             });
             console.log(this.device);
+        },
+        // 获取右侧信息
+        async getMsgData() {
+            let url = `static/data/msgData.json`;
+            const { data: msgData } = await $http.get(url);
+            console.log(msgData);
+            this.msgData = msgData;
         }
     }
 };

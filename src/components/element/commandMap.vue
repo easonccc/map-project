@@ -7,91 +7,19 @@
             :itemSelect="modalIndex"
             @childEvent="msgFromChild"
         ></commandList>
-        <div class="modal" v-if="modalShow">
-            <mapVideo
-                v-if="config.type === 'video'"
-                :deviceOne="bindData[modalIndex]"
-                @closeModal="modalHide"
-            ></mapVideo>
-            <mapVisitor
-                v-else-if="config.type === 'visitor'"
-                ref="wifiModel"
-                :deviceOne="bindData[modalIndex]"
-                @closeModal="modalHide"
-            ></mapVisitor>
-            <mapWifi
-                v-else-if="config.type === 'wifi'"
-                ref="wifiModel"
-                :deviceOne="bindData[modalIndex]"
-                @closeModal="modalHide"
-            ></mapWifi>
-            <mapLaw
-                v-else-if="config.type === 'law'"
-                ref="wifiModel"
-                :deviceOne="bindData[modalIndex]"
-                @closeModal="modalHide"
-            ></mapLaw>
-            <mapEvent
-                v-else-if="config.type === 'event'"
-                ref="wifiModel"
-                :deviceOne="bindData[modalIndex]"
-                @closeModal="modalHide"
-            ></mapEvent>
-            <mapCar
-                v-else-if="config.type === 'car'"
-                :deviceOne="bindData[modalIndex]"
-                @closeModal="modalHide"
-            ></mapCar>
-        </div>
     </div>
 </template>
 <script>
 import commandList from "./commandList";
-
-import mapModal from "./mapModal";
-import mapSlot from "./mapSlot";
-import mapVisitor from "./mapVisitor";
-import mapCar from "./mapCar";
-import mapWifi from "./mapWifi";
-import mapEvent from "./mapEvent";
-import mapLaw from "./mapLaw";
-
-import video from "../../assets/img/control05c.png";
-import car from "../../assets/img/control10c.png";
-import probe from "../../assets/img/control11c.png";
-import law from "../../assets/img/control12c.png";
-import event from "../../assets/img/control13c.png";
-
-import wifi from "../../assets/img/control02c.png";
-import broad from "../../assets/img/control04c.png";
-import light from "../../assets/img/control03c.png";
-import weather from "../../assets/img/control07c.png";
-
 export default {
     components: {
-        commandList,
-        mapModal,
-        mapSlot,
-        mapVisitor,
-        mapCar,
-        mapWifi,
-        mapEvent,
-        mapLaw
+        // 引入左侧导航
+        commandList
     },
     name: "commmandMap",
     data() {
         return {
-            icon: {
-                video: video,
-                probe: probe,
-                wifi: wifi, //js图片地址
-                law: law,
-                event: event,
-                broad: broad,
-                car: car,
-                light: light,
-                weather: weather
-            },
+            icon: {},
             listTitle: "人员列表",
             modalShow: false, //modal显示隐藏
             modalIndex: null, //设备序号

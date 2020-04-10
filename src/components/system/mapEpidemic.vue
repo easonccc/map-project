@@ -9,77 +9,42 @@
         </div>
         <div class="epidemic_content">
             <!-- 正面疫情 -->
-            <div class="front">
-                <div class="front_title">
-                    正面疫情
-                    <img
-                        src="../../assets/img/epidemic/组 25 拷贝 5.png"
-                        alt=""
-                    />
-                </div>
-                <div class="front_content">
-                    <div>
-                        <table>
-                            <tr>
-                                <td>序号</td>
-                                <td>发布时间</td>
-                                <td>疫情类别</td>
-                                <td>平台</td>
-                                <td>内容</td>
-                                <td>操作</td>
-                            </tr>
-                            <tr v-for="(item, index) in frontList" :key="index">
-                                <td>{{ item.id }}</td>
-                                <td>{{ item.time }}</td>
-                                <td>{{ item.type }}</td>
-                                <td>{{ item.platform }}</td>
-                                <td>{{ item.content }}</td>
-                                <td>{{ item.operation }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <table>
-                            <tr>
-                                <td>序号</td>
-                                <td>发布时间</td>
-                                <td>疫情类别</td>
-                                <td>平台</td>
-                                <td>内容</td>
-                                <td>操作</td>
-                            </tr>
-                            <tr v-for="(item, index) in frontList" :key="index">
-                                <td>{{ item.id }}</td>
-                                <td>{{ item.time }}</td>
-                                <td>{{ item.type }}</td>
-                                <td>{{ item.platform }}</td>
-                                <td>{{ item.content }}</td>
-                                <td>{{ item.operation }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <table>
-                            <tr>
-                                <td>序号</td>
-                                <td>发布时间</td>
-                                <td>疫情类别</td>
-                                <td>平台</td>
-                                <td>内容</td>
-                                <td>操作</td>
-                            </tr>
-                            <tr v-for="(item, index) in frontList" :key="index">
-                                <td>{{ item.id }}</td>
-                                <td>{{ item.time }}</td>
-                                <td>{{ item.type }}</td>
-                                <td>{{ item.platform }}</td>
-                                <td>{{ item.content }}</td>
-                                <td>{{ item.operation }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            <el-table :data="frontList" border style="width: 100%">
+                <el-table-column prop="id" label="序号" width="50">
+                </el-table-column>
+                <el-table-column prop="time" label="发表时间" width="180">
+                </el-table-column>
+                <el-table-column prop="type" label="疫情类别"></el-table-column>
+                <el-table-column prop="platform" label="疫情类别">
+                </el-table-column>
+                <el-table-column prop="content" label="内容"> </el-table-column>
+                <el-table-column prop="operation" label="操作">
+                </el-table-column>
+            </el-table>
+            <el-table :data="frontList" border style="width: 100%">
+                <el-table-column prop="id" label="序号" width="50">
+                </el-table-column>
+                <el-table-column prop="time" label="发表时间" width="180">
+                </el-table-column>
+                <el-table-column prop="type" label="疫情类别"></el-table-column>
+                <el-table-column prop="platform" label="疫情类别">
+                </el-table-column>
+                <el-table-column prop="content" label="内容"> </el-table-column>
+                <el-table-column prop="operation" label="操作">
+                </el-table-column>
+            </el-table>
+            <el-table :data="frontList" border style="width: 100%">
+                <el-table-column prop="id" label="序号" width="50">
+                </el-table-column>
+                <el-table-column prop="time" label="发表时间" width="180">
+                </el-table-column>
+                <el-table-column prop="type" label="疫情类别"></el-table-column>
+                <el-table-column prop="platform" label="疫情类别">
+                </el-table-column>
+                <el-table-column prop="content" label="内容"> </el-table-column>
+                <el-table-column prop="operation" label="操作">
+                </el-table-column>
+            </el-table>
         </div>
     </div>
 </template>
@@ -192,11 +157,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
+body .el-table th.gutter {
+    display: table-cell !important;
+}
+
 .epidemic {
-    background: #0f3b4c;
+    background: url(../../assets/img/visual/bgc.png);
+    background: cover;
     height: 100%;
     padding: 200px 50px 0;
-
     .epidemic_title {
         display: flex;
         flex-direction: row;
@@ -214,42 +183,53 @@ export default {
     }
 
     .epidemic_content {
+        padding-top: 60px;
+        width: 1885px;
+        margin: auto;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .front {
+        justify-content: space-around;
+        background: url(../../assets/img/visual/bg_table.png) no-repeat center
+            top;
+        /deep/.el-table,
+        .el-table__expanded-cell {
+            background-color: transparent;
+        }
+        /deep/ .el-table tr {
+            background-color: transparent !important;
+        }
+        /deep/ .el-table--enable-row-transition .el-table__body td,
+        .el-table .cell {
+            background-color: transparent;
+        }
+        /deep/.el-table__header-wrapper {
+            background-color: transparent !important;
+        }
+        /deep/ .el-table td,
+        .el-table th.is-leaf {
+            background-color: transparent !important;
+        }
+        /deep/ .el-table th {
+            background-color: transparent !important;
+        }
+        /deep/ .el-table td,
+        .el-table th {
+            padding: 0;
+        }
+        /deep/.el-table .cell,
+        .el-table th div,
+        .el-table--border td:first-child .cell,
+        .el-table--border th:first-child .cell {
+            text-align: center;
+        }
+        /deep/.el-table .cell,
+        .el-table th div,
+        .el-table--border td:first-child .cell,
+        .el-table--border th:first-child .cell {
+            padding: 0;
+        }
+        .el-table {
             flex: 1;
-            .front_title {
-                img {
-                }
-            }
-
-            .front_content {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                div {
-                    flex: 1;
-                    margin-right: 10px;
-                    table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        tr {
-                            display: inline-block;
-                            text-align: center;
-                            height: 40px;
-                            line-height: 40px;
-                            // width: 100%;
-                            // border: 1px solid #000;
-                            margin: 2px 0;
-                            td {
-                                border: 1px solid #ccc;
-                                padding: 5px;
-                            }
-                        }
-                    }
-                }
-            }
+            margin-left: 10px;
         }
     }
 }

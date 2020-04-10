@@ -3,24 +3,30 @@
         <div class="right">
             <div class="message">
                 <div class="title">
-                    <span>智能监控</span>
+                    <span>{{ msgData[0].title }}</span>
                 </div>
                 <div class="msg_content">
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>高清摄像头球机</td>
+                            <td>{{ msgData[0].name }}</td>
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>球机</td>
+                            <td>{{ msgData[0].type }}</td>
                         </tr>
                         <tr>
                             <td>位置信息</td>
                             <td class="desc">
-                                <div class="roughly">天生桥景区入口处</div>
-                                <div class="j">经:876.37749</div>
-                                <span class="w">纬:654.98789</span>
+                                <div class="roughly">
+                                    {{ msgData[0].location[0].area }}
+                                </div>
+                                <div class="j">
+                                    经: {{ msgData[0].location[0].jing }}
+                                </div>
+                                <span class="w">
+                                    {{ msgData[0].location[0].wei }}</span
+                                >
                                 <span
                                     ><img
                                         src="../../assets/img/monitoring/location.png"
@@ -30,7 +36,7 @@
                         </tr>
                         <tr>
                             <td>备注信息</td>
-                            <td>无</td>
+                            <td>{{ msgData[0].remark }}</td>
                         </tr>
                     </table>
                 </div>
@@ -50,7 +56,7 @@
             </div>
             <!-- 回放列表 -->
             <div class="list">
-                <div class="list_title">
+                <div class="list_title top-line">
                     回放 <span class="real">实时</span>
                 </div>
                 <div class="list_content">
@@ -124,49 +130,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: {
+        msgData: {
+            type: Object
+        }
+    },
+    created() {
+        console.log(this.msgData);
+    }
+};
 </script>
 
 <style scoped lang="less">
 @import "../../assets/css/mixin.less";
 @import "../../assets/css/rightView.less";
 .content {
-    .video {
-        background-color: rgba(0, 0, 0, 0.6);
-        margin-top: 5px;
-        padding-top: 9px;
-        border-top: 2px solid rgba(58, 181, 233, 1);
-        .video_title {
-            height: 40px;
-            display: flex;
-            flex-direction: row;
-            .working {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 65px;
-                height: 26px;
-                border: 1px solid rgba(123, 204, 250, 1);
-                border-radius: 6px;
-                margin: 0 4px 0 2px;
-            }
-
-            div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 60px;
-                height: 26px;
-                border-radius: 6px;
-                margin-right: 4px;
-            }
-        }
-
-        .video_content {
-            img {
-            }
-        }
-    }
     .control_content {
         width: 297px;
         display: flex;

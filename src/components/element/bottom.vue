@@ -17,6 +17,7 @@
             </swiper>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            {{ getModel }}
         </div>
     </div>
 </template>
@@ -34,6 +35,7 @@ import park from "../../assets/img/visual/park.png";
 import guide from "../../assets/img/visual/guide.png";
 import wifi from "../../assets/img/visual/wifi.png";
 
+import { mapActions, mapGetters } from "vuex";
 export default {
     name: "bottom",
     data() {
@@ -52,7 +54,8 @@ export default {
                 slidesPerView: 7
                 // observeParents: true
             },
-            swiperData: [
+            swiperData: null
+            /*  swiperData: [
                 {
                     name: "全部",
                     src: all,
@@ -113,12 +116,34 @@ export default {
                     src: wifi,
                     to: "/alarm"
                 }
-            ]
+            ] */
         };
     },
     components: {
         Swiper,
         SwiperSlide
+    },
+    computed: {
+        // ...mapGetters(["getSot"], ["getModel"])
+    },
+    created() {
+        this.getType();
+    },
+    methods: {
+        // 获取数据
+        getType() {
+            if (JSON.parse(localStorage.getItem("model")).type === "sot") {
+                this.swiperData = JSON.parse(
+                    sessionStorage.getItem("sot")
+                ).data.data[0].swiperData;
+            } else if (
+                JSON.parse(localStorage.getItem("model")).type === "city"
+            ) {
+                this.swiperData = JSON.parse(
+                    sessionStorage.getItem("city")
+                ).data.data[0].swiperData;
+            }
+        }
     }
 };
 </script>

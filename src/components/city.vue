@@ -55,11 +55,11 @@ export default {
         },
         // 获取底部导航栏图标
         async getIconData() {
-            let url = `static/data/sot.json`;
+            let url = `static/data/city.json`;
             const data = await $http.get(url);
-            this.$store.dispatch("changeSot", { data });
+            this.$store.dispatch("changeCity", { data });
             this.$store.dispatch("changeModel", {
-                type: "sot"
+                type: this.$route.query.type
             });
         }
     }
