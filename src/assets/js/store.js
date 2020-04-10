@@ -31,8 +31,6 @@ const store = new Vuex.Store({
         getModel: function (state) {
             return state.model
         }
-
-
     },
     mutations: {
         //格式：类型(名字)+处理函数
@@ -55,7 +53,7 @@ const store = new Vuex.Store({
         },
         changeModel(state, type) {
             state.model = type
-            localStorage.setItem('model', JSON.stringify(type))
+            sessionStorage.setItem('model', JSON.stringify(type))
         }
 
     },

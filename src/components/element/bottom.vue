@@ -128,20 +128,23 @@ export default {
     },
     created() {
         this.getType();
+        console.log("ok");
     },
     methods: {
         // 获取数据
         getType() {
-            if (JSON.parse(localStorage.getItem("model")).type === "sot") {
+            if (JSON.parse(sessionStorage.getItem("model")).type === "sot") {
                 this.swiperData = JSON.parse(
                     sessionStorage.getItem("sot")
                 ).data.data[0].swiperData;
+                console.log("1111");
             } else if (
-                JSON.parse(localStorage.getItem("model")).type === "city"
+                JSON.parse(sessionStorage.getItem("model")).type === "city"
             ) {
                 this.swiperData = JSON.parse(
                     sessionStorage.getItem("city")
                 ).data.data[0].swiperData;
+                console.log("222");
             }
         }
     }
