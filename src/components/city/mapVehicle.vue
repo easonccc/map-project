@@ -42,7 +42,7 @@
             <div class="vehicle_msg">
                 <div class="vehicle_title">
                     <span>车流信息</span>
-                    <span>修改路线</span>
+                    <span @click="showDialog">修改路线</span>
                 </div>
                 <div class="vehicle_content">
                     <div class="line"></div>
@@ -65,11 +65,19 @@
             <div class="start_btn">
                 启动预案
             </div>
+            <div class="myDialog">
+                <v-dialog
+                    v-show="isDialogVisible"
+                    @close="closeDialog"
+                    :pathData="pathData"
+                ></v-dialog>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import dialog from "../event/dialog2";
 export default {
     data() {
         return {
@@ -86,8 +94,20 @@ export default {
                 { id: 10, msg: "大九湖游客中心" },
                 { id: 11, msg: "大九湖游客中心" },
                 { id: 12, msg: "大九湖游客中心" }
-            ]
+            ],
+            isDialogVisible: false
         };
+    },
+    methods: {
+        showDialog() {
+            this.isDialogVisible = true;
+        },
+        closeDialog() {
+            this.isDialogVisible = false;
+        }
+    },
+    components: {
+        "v-dialog": dialog
     }
 };
 </script>
@@ -115,6 +135,7 @@ export default {
                 &:last-child {
                     color: #fff;
                     margin-right: 10px;
+                    cursor: pointer;
                 }
             }
         }

@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import dialog from "../event/dialog";
+import dialog from "../event/dialog1";
 export default {
     data() {
         return {
