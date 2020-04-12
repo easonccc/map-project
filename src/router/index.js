@@ -1,169 +1,241 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-import slot from '@/components/slot'
+import slot from "@/components/slot";
 // import visitor from '@/components/visitor'
-import car from '@/components/car'
-import wifi from '@/components/wifi'
-import law from '@/components/law'
-import event from '@/components/event'
-import event1 from '@/components/event/event1'
-import event2 from '@/components/event/event2'
-
+import car from "@/components/car";
+import wifi from "@/components/wifi";
+import law from "@/components/law";
+import event from "@/components/event";
+import event1 from "@/components/event/event1";
+import event2 from "@/components/event/event2";
 
 // 引入登录页面
-import login from '@/components/login'
+import login from "@/components/login";
 // 引入主页面
-import home from '@/components/home'
+import home from "@/components/home";
 // 引入智能监控
-import monitoring from '@/components/monitoring.vue'
+import monitoring from "@/components/monitoring.vue";
 // 引入数字广播
-import broadcasting from '@/components/broadcasting.vue'
+import broadcasting from "@/components/broadcasting.vue";
 // 引入智能照明
-import illumination from '@/components/illumination'
+import illumination from "@/components/illumination";
 // 引入智能停车
-import park from '@/components/park'
+import park from "@/components/park";
 // 引入智慧导视
-import guide from '@/components/guide'
+import guide from "@/components/guide";
 // 引入大气环境
-import environment from '@/components/environment'
+import environment from "@/components/environment";
 // 引入垃圾桶信息
-import trash from '@/components/trash'
+import trash from "@/components/trash";
 // 引入井盖信息
-import well from '@/components/well'
+import well from "@/components/well";
 // 引入防火监测
-import fireproofing from '@/components/fireproofing'
+import fireproofing from "@/components/fireproofing";
 // 引入自助报警
-import alarm from '@/components/alarm'
-
+import alarm from "@/components/alarm";
 
 // 引入智慧城市
-import city from '@/components/city.vue'
+import city from "@/components/city.vue";
 // 引入交通信息
-import traffic from '@/components/traffic'
+import traffic from "@/components/traffic";
 // 引入车辆
-import vehicle from '@/components/vehicle'
+import vehicle from "@/components/vehicle";
+// 引入网络社区
+import community from "@/components/community";
+// 引入楼宇信息
+import building from "@/components/building";
+// 引入商户
+import shop from "@/components/shop";
+// 引入绿化信息
+import afforest from "@/components/afforest";
+// 引入厕所信息
+import toilet from "@/components/toilet";
 
 // 引入系统----疫情监测
-import epidemic from '@/components/epidemic'
+import system from "@/components/system.vue";
+import epidemic from "@/components/epidemic";
+// 引入发布信息
+import publish from "@/components/publish";
+// 引入巡检执法
+import polling from "@/components/polling";
+// 引入投诉处理
+import complaint from "@/components/complaint";
+import emergency from "@/components/emergency";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-    routes: [{
-            path: '/',
-            redirect: '/login'
+    routes: [
+        {
+            path: "/",
+            redirect: "/login"
         },
         {
-            path: '/login',
-            name: 'login',
+            path: "/login",
+            name: "login",
             component: login
         },
         {
-            path: '/home',
-            name: 'home',
+            path: "/home",
+            name: "home",
             component: home
-        }, {
-            path: '/illumination',
-            name: 'illumination',
+        },
+        {
+            path: "/illumination",
+            name: "illumination",
             component: illumination
         },
         {
-            path: '/environment',
-            name: 'environment',
+            path: "/environment",
+            name: "environment",
             component: environment
         },
         {
-            path: '/park',
-            name: 'park',
+            path: "/park",
+            name: "park",
             component: park
         },
         {
-            path: '/monitoring',
-            name: 'monitoring',
+            path: "/monitoring",
+            name: "monitoring",
             component: monitoring
         },
         {
-            path: '/broadcasting',
-            name: 'broadcasting',
+            path: "/broadcasting",
+            name: "broadcasting",
             component: broadcasting
         },
         {
-            path: '/guide',
-            name: 'guide',
+            path: "/guide",
+            name: "guide",
             component: guide
         },
         {
-            path: '/trash',
-            name: 'trash',
+            path: "/trash",
+            name: "trash",
             component: trash
         },
         {
-            path: '/well',
-            name: 'well',
+            path: "/emergency",
+            name: "emergency",
+            component: emergency
+        },
+        {
+            path: "/well",
+            name: "well",
             component: well
         },
         {
-            path: '/fireproofing',
-            name: 'fireproofing',
+            path: "/fireproofing",
+            name: "fireproofing",
             component: fireproofing
         },
         {
-            path: '/alarm',
-            name: 'alarm',
+            path: "/alarm",
+            name: "alarm",
             component: alarm
         },
         {
-            path: '/slot',
-            name: 'slot',
+            path: "/slot",
+            name: "slot",
             component: slot
         },
         {
-            path: '/traffic',
-            name: 'traffic',
+            path: "/traffic",
+            name: "traffic",
             component: traffic
         },
         {
-            path: '/vehicle',
-            name: 'vehicle',
+            path: "/vehicle",
+            name: "vehicle",
             component: vehicle
         },
         {
-            path: '/epidemic',
-            name: 'epidemic',
+            path: "/epidemic",
+            name: "epidemic",
             component: epidemic
-        }, {
-            path: '/law',
-            name: 'law',
-            component: law,
         },
         {
-            path: '/wifi',
-            name: 'wifi',
-            component: wifi,
+            path: "/complaint",
+            name: "complaint",
+            component: complaint
         },
         {
-            path: '/city',
-            name: 'city',
+            path: "/law",
+            name: "law",
+            component: law
+        },
+        {
+            path: "/wifi",
+            name: "wifi",
+            component: wifi
+        },
+        {
+            path: "/city",
+            name: "city",
             component: city
         },
         {
-            path: '/car',
-            name: 'car',
+            path: "/publish",
+            name: "publish",
+            component: publish
+        },
+        {
+            path: "/community",
+            name: "community",
+            component: community
+        },
+        {
+            path: "/afforest",
+            name: "afforest",
+            component: afforest
+        },
+        {
+            path: "/shop",
+            name: "shop",
+            component: shop
+        },
+        {
+            path: "/polling",
+            name: "polling",
+            component: polling
+        },
+        {
+            path: "/system",
+            name: "system",
+            component: system
+        },
+        {
+            path: "/car",
+            name: "car",
             component: car
         },
         {
-            path: '/event',
-            component: event,
-            children: [{
-                path: 'event1',
-                name: 'event1',
-                component: event1,
-            }, {
-                path: 'event2',
-                name: 'event2',
-                component: event2,
-            }]
+            path: "/toilet",
+            name: "toilet",
+            component: toilet
         },
+        {
+            path: "/building",
+            name: "building",
+            component: building
+        },
+        {
+            path: "/event",
+            component: event,
+            children: [
+                {
+                    path: "event1",
+                    name: "event1",
+                    component: event1
+                },
+                {
+                    path: "event2",
+                    name: "event2",
+                    component: event2
+                }
+            ]
+        }
     ]
-})
+});

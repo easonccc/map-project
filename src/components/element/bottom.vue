@@ -145,6 +145,13 @@ export default {
                     sessionStorage.getItem("city")
                 ).data.data[0].swiperData;
                 console.log("222");
+            } else if (
+                JSON.parse(sessionStorage.getItem("model")).type === "system"
+            ) {
+                this.swiperData = JSON.parse(
+                    sessionStorage.getItem("system")
+                ).data.data[0].swiperData;
+                console.log("333");
             }
         }
     }

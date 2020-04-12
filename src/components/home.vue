@@ -41,7 +41,7 @@
                     <span>智慧农业</span>
                     <img src="../assets/img/组 3(5).png" alt="" />
                 </li>
-                <li>
+                <li @click="goSystem">
                     <span>系统应用</span>
                     <img src="../assets/img/组 3(6).png" alt="" />
                 </li>
@@ -69,6 +69,14 @@ export default {
                 path: "/city",
                 query: {
                     type: "city"
+                }
+            });
+        },
+        goSystem() {
+            this.$router.push({
+                path: "/system",
+                query: {
+                    type: "system"
                 }
             });
         }
