@@ -20,16 +20,32 @@
                                 v-for="item in pathData"
                                 :key="item.id"
                             >
-                                <div class="add">+</div>
+                                <div class="add">
+                                    <img
+                                        src="../../assets/img/path/添加.png"
+                                        alt=""
+                                    />
+                                </div>
                                 <div class="inner">
                                     {{ item.msg }}
                                     <div class="path_edit">
-                                        <span class="remove">-</span>
-                                        <span class="edit">i</span>
+                                        <img
+                                            src="../../assets/img/path/添加 拷贝 21.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="../../assets/img/path/编 辑.png"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                             </div>
-                            <div>+</div>
+                            <div class="add_last">
+                                <img
+                                    src="../../assets/img/path/添加.png"
+                                    alt=""
+                                />
+                            </div>
                         </div>
                         <div class="footer">
                             <div class="btn_cancel" @click="close">
@@ -125,16 +141,11 @@ export default {
                 // align-items: center;
                 .add {
                     margin-top: 50px;
-                    color: #3bb5e7;
-                    width: 15px;
-                    height: 15px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding-bottom: 1px;
-                    border: 1px solid #3bb5e7;
                     margin-right: 5px;
                     cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
                 }
                 .inner {
                     width: 12px;
@@ -143,22 +154,21 @@ export default {
                     justify-content: space-between;
                     height: 320px;
                     .path_edit {
-                        .remove {
-                            height: 19px;
-                            width: 19px;
-                            line-height: 19px;
-                            text-align: center;
-                            border: 1px solid #e62117;
-                            color: #e62117;
+                        img {
+                            margin-bottom: 16px;
+                            cursor: pointer;
                         }
                     }
                 }
+            }
+            .add_last {
+                margin-top: 50px;
             }
         }
         .footer {
             position: absolute;
             right: 10px;
-            bottom: 10px;
+            bottom: -50px;
             display: flex;
             .btn_cancel,
             .btn_cartain {

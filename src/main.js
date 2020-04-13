@@ -26,8 +26,12 @@ import {
     Input,
     Dialog,
     Popover,
+    DatePicker,
+    Select,
+    Option,
+    TableColumn,
     Table,
-    TableColumn
+    Radio
     // MessageBox
 } from 'element-ui';
 
@@ -46,8 +50,12 @@ Vue.use(Icon);
 Vue.use(Input);
 Vue.use(Popover);
 Vue.use(Dialog);
-Vue.use(Table);
 Vue.use(TableColumn)
+Vue.use(DatePicker)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(Table)
+Vue.use(Radio)
 // Vue.use(MessageBox)
 
 Vue.prototype.$message = Message;

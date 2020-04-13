@@ -5,6 +5,7 @@
         </div>
         <div class="body">
             <v-mapEpidemic></v-mapEpidemic>
+            <bottom></bottom>
         </div>
     </div>
 </template>
@@ -12,6 +13,7 @@
 import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import mapEpidemic from "./system/mapEpidemic";
+import bottom from "./element/bottom";
 
 export default {
     name: "monitoring",
@@ -21,7 +23,8 @@ export default {
     components: {
         "v-header": header,
         "v-loader": loader,
-        "v-mapEpidemic": mapEpidemic
+        "v-mapEpidemic": mapEpidemic,
+        bottom
     },
     created() {},
     methods: {}

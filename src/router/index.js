@@ -62,12 +62,13 @@ import polling from "@/components/polling";
 // 引入投诉处理
 import complaint from "@/components/complaint";
 import emergency from "@/components/emergency";
+// 引入视频会议
+import videoconferencing from '@/components/videoconferencing'
 
 Vue.use(Router);
 
 export default new Router({
-    routes: [
-        {
+    routes: [{
             path: "/",
             redirect: "/login"
         },
@@ -167,6 +168,11 @@ export default new Router({
             component: law
         },
         {
+            path: "/videoconferencing",
+            name: "videoconferencing",
+            component: videoconferencing
+        },
+        {
             path: "/wifi",
             name: "wifi",
             component: wifi
@@ -224,8 +230,7 @@ export default new Router({
         {
             path: "/event",
             component: event,
-            children: [
-                {
+            children: [{
                     path: "event1",
                     name: "event1",
                     component: event1

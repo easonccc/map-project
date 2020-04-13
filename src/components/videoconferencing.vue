@@ -2,19 +2,17 @@
     <div class="content">
         <div class="header">
             <v-header />
-            <v-tips :send-val="send"></v-tips>
         </div>
         <div class="body">
-            <v-comamndMap v-if="device" :config="config" :bindData="device" />
             <v-mapVideo></v-mapVideo>
+            <v-bottom></v-bottom>
         </div>
     </div>
 </template>
 <script>
 import header from "./element/header.vue";
 import loader from "./element/loader.vue";
-import comamndMap from "./element/commandMap.vue";
-import tips from "./element/tips.vue";
+import bottom from "./element/bottom.vue";
 import mapVideo from "./system/mapVideo";
 
 export default {
@@ -26,21 +24,14 @@ export default {
                 name: "video",
                 type: "visual",
                 listTitle: "设备总数"
-            },
-            send: [
-                { title: "神龙谷景区车道出现交通事故" },
-                { title: "天燕景区道路损坏需要立即维修" },
-                { title: "神农坛景区出现火灾预警" },
-                { title: "神农坛景区出现火灾预警" }
-            ]
+            }
         };
     },
     components: {
         "v-header": header,
         "v-loader": loader,
-        "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapVideo": mapVideo
+        "v-mapVideo": mapVideo,
+        "v-bottom": bottom
     },
     created() {
         this.getData();

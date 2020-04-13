@@ -2,20 +2,18 @@
     <div class="content">
         <div class="header">
             <v-header />
-            <v-tips :send-val="send"></v-tips>
         </div>
         <div class="body">
-            <v-comamndMap v-if="device" :config="config" :bindData="device" />
             <v-mapEmergency></v-mapEmergency>
+            <bottom></bottom>
         </div>
     </div>
 </template>
 <script>
 import header from "./element/header.vue";
 import loader from "./element/loader.vue";
-import comamndMap from "./element/commandMap.vue";
-import tips from "./element/tips.vue";
 import mapEmergency from "./system/mapEmergency";
+import bottom from "./element/bottom";
 
 export default {
     name: "monitoring",
@@ -38,9 +36,8 @@ export default {
     components: {
         "v-header": header,
         "v-loader": loader,
-        "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapEmergency": mapEmergency
+        "v-mapEmergency": mapEmergency,
+        bottom
     },
     created() {
         this.getData();
