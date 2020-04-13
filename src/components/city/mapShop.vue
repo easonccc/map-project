@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import dialog from "../event/dialog3";
+import dialog from "../event/dialog_shop";
 
 export default {
     data() {
