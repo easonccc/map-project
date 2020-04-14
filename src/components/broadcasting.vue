@@ -24,9 +24,9 @@ export default {
         return {
             device: null,
             config: {
-                name: "video",
-                type: "visual",
-                listTitle: "设备总数"
+                name: "broad",
+                type: "broad",
+                listTitle: "广播"
             },
             send: [
                 { title: "神龙谷景区车道出现交通事故" },

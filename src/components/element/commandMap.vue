@@ -11,6 +11,11 @@
             :deviceOne="bindData[modalIndex]"
             @closeModal="modalHide"
         ></mapMonitoring>
+        <mapBroadcasting
+            v-if="config.type === 'trash'"
+            :deviceOne="bindData[modalIndex]"
+            @closeModal="modalHide"
+        ></mapBroadcasting>
         <bottom @childEvent="msgFromChild"></bottom>
     </div>
 </template>
@@ -18,10 +23,14 @@
 import video from "../../assets/img/icon/video.png";
 import video2 from "../../assets/img/icon/video2.png";
 import trash from "../../assets/img/icon/trash.png";
+import broad from "../../assets/img/icon/broad.png";
 import commandList from "./commandList";
 // 引入底部导航栏
 import bottom from "../element/bottom";
+// 监控组件
 import mapMonitoring from "./mapMonitoring";
+// 广播组件
+import mapBroadcasting from "./mapBroadcasting";
 export default {
     components: {
         // 引入左侧导航
@@ -35,7 +44,8 @@ export default {
             icon: {
                 video: video,
                 trash: trash,
-                video2: video2
+                video2: video2,
+                broad: broad
             },
             listTitle: "人员列表",
             modalShow: false, //modal显示隐藏
