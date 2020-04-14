@@ -6,7 +6,11 @@
         </div>
         <div class="content">
             <swiper ref="mySwiper" :options="swiperOptions">
-                <swiper-slide v-for="(item, index) in swiperData" :key="index">
+                <swiper-slide
+                    v-for="(item, index) in swiperData"
+                    @click.stop="sendMsgToParent(index, item.type)"
+                    :key="index"
+                >
                     <router-link :to="item.to">
                         <img :src="item.src" alt="" />
                         <div class="text">{{ item.name }}</div>
@@ -153,6 +157,10 @@ export default {
                 ).data.data[0].swiperData;
                 console.log("333");
             }
+        },
+        // 向父组件commondMap传递当前点击的索引等
+        sendMsgToParent: function(index, type) {
+            this.$emit("childEvent", { index, type });
         }
     }
 };

@@ -5,21 +5,38 @@
             :device="bindData"
             :title="config.listTitle"
             :itemSelect="modalIndex"
-            @childEvent="msgFromChild"
         ></commandList>
+        <mapMonitoring
+            v-if="config.type === 'video'"
+            :deviceOne="bindData[modalIndex]"
+            @closeModal="modalHide"
+        ></mapMonitoring>
+        <bottom @childEvent="msgFromChild"></bottom>
     </div>
 </template>
 <script>
+import video from "../../assets/img/icon/video.png";
+import video2 from "../../assets/img/icon/video2.png";
+import trash from "../../assets/img/icon/trash.png";
 import commandList from "./commandList";
+// 引入底部导航栏
+import bottom from "../element/bottom";
+import mapMonitoring from "./mapMonitoring";
 export default {
     components: {
         // 引入左侧导航
-        commandList
+        commandList,
+        mapMonitoring,
+        bottom
     },
     name: "commmandMap",
     data() {
         return {
-            icon: {},
+            icon: {
+                video: video,
+                trash: trash,
+                video2: video2
+            },
             listTitle: "人员列表",
             modalShow: false, //modal显示隐藏
             modalIndex: null, //设备序号
@@ -57,29 +74,29 @@ export default {
         this.drawPoint(this.bindData);
     },
     methods: {
-        // 隐藏模态框
-        modalHide() {
-            //移除点的跳跃动画
-            // console.log(this.markers[this.modalIndex]);
-            let m = this.markers[this.modalIndex];
-            m.setAnimation("AMAP_ANIMATION_NONE");
-            m.setMap(this.map);
-            if (this.modalShow) {
-                this.modalShow = false;
-                this.modalIndex = null;
-            }
-        },
+        // // 隐藏模态框
+        // modalHide() {
+        //     //移除点的跳跃动画
+        //     // console.log(this.markers[this.modalIndex]);
+        //     let m = this.markers[this.modalIndex];
+        //     m.setAnimation("AMAP_ANIMATION_NONE");
+        //     m.setMap(this.map);
+        //     if (this.modalShow) {
+        //         this.modalShow = false;
+        //         this.modalIndex = null;
+        //     }
+        // },
         msgFromChild(msg) {
-            // console.log(d, type);
-            this.map.setCenter(this.bindData[msg.index].location);
-            this.markers.forEach(v => {
-                v.setAnimation("AMAP_ANIMATION_NONE");
-            });
-            this.markers[msg.index].setAnimation("AMAP_ANIMATION_BOUNCE");
+            this.map.setCenter([111.343811, 25.273539]);
+            // this.markers.forEach(v => {
+            //     v.setAnimation("AMAP_ANIMATION_NONE");
+            // });
+            // this.markers[msg.index].setAnimation("AMAP_ANIMATION_BOUNCE");
             this.markers[msg.index].setMap(this.map);
             this.map.setZoom(16);
             this.modalIndex = msg.index;
             this.modalShow = true;
+            console.log(modalIndex);
         },
 
         //绘制地图标点
@@ -87,25 +104,35 @@ export default {
             let that = this;
             // 百度地图API功能
             that.map = new AMap.Map("mapBox", {
-                resizeEnable: true,
-                // center: [116.397428, 39.90923],
-                zoom: 13,
-
+                // resizeEnable: true,
+                center: [110.038603, 31.47527],
+                zoom: 0,
                 layers: [
                     //使用多个图层
-                    new AMap.TileLayer.Satellite(), // 卫星
+                    // new AMap.TileLayer.Satellite(), // 卫星
                     new AMap.TileLayer.RoadNet() // 路网
                 ]
             });
-            let jsonData = [];
-            for (let i = 0; i < device.length; i++) {
+            let jsonData = [
+                [110.038603, 31.47527],
+                [109.98999, 31.488573],
+                [110.332886, 31.656288],
+                [110.35249, 31.630266],
+                [110.669554, 31.630266],
+                [110.352426, 31.630266],
+                [110.332886, 31.639988],
+                [110.552556, 31.638866],
+                [110.442666, 31.630006]
+            ];
+
+            /*  for (let i = 0; i < device.length; i++) {
                 jsonData.push(device[i].location);
-            }
+            } */
             let markers = [];
             for (let i = 0; i < jsonData.length; i++) {
                 let myIcon = new AMap.Icon({
-                    image: that.icon[device[i].type],
-                    size: new AMap.Size(34, 34)
+                    image: that.icon["video"],
+                    size: new AMap.Size(40, 40)
                 });
                 let marker = new AMap.Marker({
                     icon: myIcon,
@@ -123,15 +150,17 @@ export default {
             this.markers = markers;
             this.map.setFitView(markers);
 
+            // 点击图标事件
             function _onClick(e) {
                 let p = e.target;
                 console.log(p);
-                that.markers.forEach(v => {
-                    v.setAnimation("AMAP_ANIMATION_NONE");
-                });
-                that.map.setZoom(16);
+                // 设置图标跳动
+                // that.markers.forEach(v => {
+                //     v.setAnimation("AMAP_ANIMATION_NONE");
+                // });
+                that.map.setZoom(20);
                 that.map.setCenter([p.getPosition().lng, p.getPosition().lat]);
-                p.setAnimation("AMAP_ANIMATION_BOUNCE");
+                // p.setAnimation("AMAP_ANIMATION_BOUNCE");
                 that.modalShow = true;
                 that.modalIndex = p.getExtData().index;
             }

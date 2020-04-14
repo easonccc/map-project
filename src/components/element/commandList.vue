@@ -4,7 +4,7 @@
             <img src="../../assets/img/组 21 拷贝.png" alt="" />
         </div>
         <!--右侧导航区域  -->
-        <!--  <div class="box-left">
+        <div class="box-left" v-if="isSlot">
             <div class="device">
                 <div class="list">
                     <ul class="list-inner">
@@ -92,8 +92,8 @@
                     </ul>
                 </div>
             </div>
-        </div> -->
-        <div class="thumbnail">
+        </div>
+        <div v-else class="thumbnail">
             <!-- 第一层 -->
             <ul>
                 <li>
@@ -164,14 +164,18 @@
                 </li>
             </ul>
         </div>
-        <bottom></bottom>
     </div>
 </template>
 
 <script>
-// 引入底部导航栏
-import bottom from "./bottom.vue";
+// // 引入底部导航栏
+// import bottom from "./bottom.vue";
 export default {
+    data() {
+        return {
+            isSlot: true
+        };
+    },
     props: {
         device: {
             type: Array,
@@ -192,10 +196,10 @@ export default {
         sendMsgToParent: function(index, type) {
             this.$emit("childEvent", { index, type });
         }
-    },
-    components: {
-        bottom
     }
+    // components: {
+    //     bottom
+    // }
 };
 </script>
 
@@ -214,7 +218,6 @@ export default {
     top: 0;
     margin-top: 134px;
     width: 297px;
-    height: 100%;
     z-index: 100;
     background: rgba(0, 0, 0, 0.3) !important;
 }

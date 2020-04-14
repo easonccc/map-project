@@ -25,12 +25,7 @@ export default {
                 type: "visual",
                 listTitle: "设备总数"
             },
-            send: [
-                { title: "神龙谷景区车道出现交通事故" },
-                { title: "天燕景区道路损坏需要立即维修" },
-                { title: "神农坛景区出现火灾预警" },
-                { title: "神农坛景区出现火灾预警" }
-            ]
+            send: null
         };
     },
     components: {
@@ -42,8 +37,15 @@ export default {
     created() {
         this.getData();
         this.getIconData();
+        this.getTipsData();
     },
     methods: {
+        // 获取提示信息
+        async getTipsData() {
+            const { data: res } = await $http.get(`static/data/tipsData.json`);
+            console.log(res);
+            this.send = res;
+        },
         // 关于地图数据
         getData() {
             let url = `static/data/visual.json`;
