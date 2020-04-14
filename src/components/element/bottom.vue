@@ -2,7 +2,7 @@
     <!-- 底部导航区域 -->
     <div class="box-bottom">
         <div class="title">
-            物联管理
+            {{ swiperData[0].title }}
         </div>
         <div class="content">
             <swiper ref="mySwiper" :options="swiperOptions">

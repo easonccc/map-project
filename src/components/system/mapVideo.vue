@@ -1,7 +1,13 @@
 <template>
     <div class="video">
         <div class="video_content">
+            <!-- 左侧文件共享窗口 -->
             <div class="video_left">
+                <!-- 标题 -->
+                <div class="window_name">
+                    文件共享窗口
+                    <img src="../../assets/img/visual/组 25.png" alt="" />
+                </div>
                 <div class="dailog">
                     <div class="icon">
                         <img src="../../assets/img/video/组 48.png" alt="" />
@@ -132,6 +138,11 @@
                 </div>
             </div>
             <div class="video_right">
+                <!-- 右侧窗口标题 -->
+                <div class="meeting">
+                    <img src="../../assets/img/visual/right25.png" alt="" />
+                    会议成员窗口
+                </div>
                 <div class="guichet">
                     <div class="guichet_title">
                         我
@@ -253,6 +264,12 @@ export default {
             box-sizing: border-box;
             position: relative;
             margin-right: 10px;
+            .window_name {
+                position: absolute;
+                top: -32px;
+                left: 5px;
+                font-size: 24px;
+            }
             .dailog {
                 margin-bottom: 40px;
                 display: flex;
@@ -393,6 +410,13 @@ export default {
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
+        position: relative;
+        .meeting {
+            position: absolute;
+            right: 5px;
+            top: -33px;
+            font-size: 24px;
+        }
         .guichet {
             margin-bottom: 20px;
             height: 173px;

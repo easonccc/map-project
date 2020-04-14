@@ -1,7 +1,10 @@
 <template>
     <div class="epidemic">
         <div class="epidemic_title">
-            <span>疫情列表</span>
+            <div class="epidemic_title_text">
+                疫情列表
+                <img src="../../assets/img/visual/组 25.png" alt="" />
+            </div>
             <div class="time">
                 <div class="time_name">发布时间</div>
                 <div class="input">input框</div>
@@ -166,11 +169,21 @@ body .el-table th.gutter {
     background-size: cover;
     height: 100%;
     padding: 200px 50px 0;
+
     .epidemic_title {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        span {
+        .epidemic_title_text {
+            position: absolute;
+            top: 50px;
+            left: 235px;
+            font-size: 24px;
+            color: #fff;
+            img {
+                margin-left: 25px;
+            }
         }
 
         .time {

@@ -1,49 +1,48 @@
-[
-    {
-        "type": "system",
-        "swiperData": [
-            {
-                "name": "全部应用",
-                "src": "../../static/img/visual/all.png",
-                "to": "/system",
-                "type": "system"
-            },
-            {
-                "name": "应急通知",
-                "src": "../../static/img/visual/emergency.png",
-                "to": "/emergency",
-                "type": "system"
-            },
-            {
-                "name": "视频会议",
-                "src": "../../static/img/visual/video.png",
-                "to": "/videoconferencing",
-                "type": "system"
-            },
-            {
-                "name": "信息发布",
-                "src": "../../static/img/visual/msg.png",
-                "to": "/publish",
-                "type": "system"
-            },
-            {
-                "name": "巡检执法",
-                "src": "../../static/img/visual/polling.png",
-                "to": "/polling",
-                "type": "system"
-            },
-            {
-                "name": "投诉处置",
-                "src": "../../static/img/visual/complaint.png",
-                "to": "/complaint",
-                "type": "system"
-            },
-            {
-                "name": "疫情监测",
-                "src": "../../static/img/visual/epidemic.png",
-                "to": "/epidemic",
-                "type": "system"
-            }
-        ]
-    }
-]
+[{
+    "type": "system",
+    "name": "系统应用",
+    "swiperData": [{
+            "name": "全部应用",
+            "src": "../../static/img/visual/all.png",
+            "to": "/home",
+            "type": "system",
+            "title": "系统应用"
+        },
+        {
+            "name": "应急通知",
+            "src": "../../static/img/visual/emergency.png",
+            "to": "/emergency",
+            "type": "system"
+        },
+        {
+            "name": "视频会议",
+            "src": "../../static/img/visual/video.png",
+            "to": "/videoconferencing",
+            "type": "system"
+        },
+        {
+            "name": "信息发布",
+            "src": "../../static/img/visual/msg.png",
+            "to": "/publish",
+            "type": "system"
+        },
+        {
+            "name": "巡检执法",
+            "src": "../../static/img/visual/polling.png",
+            "to": "/polling",
+            "type": "system"
+        },
+        {
+            "name": "投诉处置",
+            "src": "../../static/img/visual/complaint.png",
+            "to": "/complaint",
+            "type": "system"
+        },
+        {
+            "name": "疫情监测",
+            "src": "../../static/img/visual/epidemic.png",
+            "to": "/epidemic",
+            "type": "system"
+        }
+    ]
+}]

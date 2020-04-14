@@ -188,8 +188,8 @@ export default {
     font-weight: bold;
     color: transparent;
     position: absolute;
-    right: 17px;
-    top: 0;
+    right: 40px;
+    top: 18px;
     background: transparent;
 }
 #green {

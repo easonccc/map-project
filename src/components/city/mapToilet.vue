@@ -79,6 +79,39 @@
                             <div class="line"></div>
                         </div>
                     </div>
+                    <div class="men">
+                        <div class="title">
+                            <div class="icon">
+                                <img
+                                    src="../../assets/img/toilet/women.png"
+                                    alt=""
+                                />
+                            </div>
+                            <span>女厕</span>
+                            <div class="y">已用 <span> 6</span>个</div>
+                            <div class="s">剩余 <span> 6</span>个</div>
+                        </div>
+                        <div class="content">
+                            <ul class="clear-fix">
+                                <li>占用</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="line"></div>
+                            <ul class="clear-fix">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="line"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="start_btn">
@@ -126,9 +159,13 @@ export default {
     .message {
         padding-bottom: 20px;
     }
+    .working_title {
+        padding-left: 20px;
+    }
     .working_content {
         padding: 5px 20px;
         .men {
+            margin-bottom: 20px;
             .title {
                 display: flex;
                 align-items: center;
@@ -161,8 +198,7 @@ export default {
             }
 
             .content {
-                height: 274px;
-                ul { 
+                ul {
                     width: 252px;
                     margin-top: 2px;
                     li {

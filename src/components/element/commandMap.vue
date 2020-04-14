@@ -87,16 +87,17 @@ export default {
             let that = this;
             // 百度地图API功能
             that.map = new AMap.Map("mapBox", {
-                // resizeEnable: true,
-                center: [116.397428, 39.90923],
+                resizeEnable: true,
+                // center: [116.397428, 39.90923],
                 zoom: 13,
+
                 layers: [
                     //使用多个图层
-                    new AMap.TileLayer.Satellite() // 卫星
-                    // new AMap.TileLayer.RoadNet() // 路网
+                    new AMap.TileLayer.Satellite(), // 卫星
+                    new AMap.TileLayer.RoadNet() // 路网
                 ]
             });
-            /* let jsonData = [];
+            let jsonData = [];
             for (let i = 0; i < device.length; i++) {
                 jsonData.push(device[i].location);
             }
@@ -133,7 +134,7 @@ export default {
                 p.setAnimation("AMAP_ANIMATION_BOUNCE");
                 that.modalShow = true;
                 that.modalIndex = p.getExtData().index;
-            } */
+            }
         }
     }
 };
