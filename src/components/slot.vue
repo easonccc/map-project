@@ -16,6 +16,7 @@ import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
 
 export default {
+    inject: ["reload"],
     name: "vedio",
     data() {
         return {
@@ -38,6 +39,9 @@ export default {
         this.getData();
         this.getIconData();
         this.getTipsData();
+    },
+    activated() {
+        this.reload();
     },
     methods: {
         // 获取提示信息

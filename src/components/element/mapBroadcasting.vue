@@ -101,7 +101,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: "mapBroadcasting",
+    props: {
+        deviceOne: {
+            type: Object
+        }
+    }
+};
 </script>
 
 <style scoped lang="less">

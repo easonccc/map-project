@@ -3,29 +3,29 @@
         <div class="right">
             <div class="message">
                 <div class="title">
-                    <span>{{ msgData[0].title }}</span>
+                    <span>{{ msgOne[0].title }}</span>
                 </div>
                 <div class="msg_content">
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>{{ msgData[0].name }}</td>
+                            <td>{{ msgOne[0].name }}</td>
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>{{ msgData[0].type }}</td>
+                            <td>{{ msgOne[0].type }}</td>
                         </tr>
                         <tr>
                             <td>位置信息</td>
                             <td class="desc">
                                 <div class="roughly">
-                                    {{ msgData[0].location[0].area }}
+                                    {{ msgOne[0].location[0].area }}
                                 </div>
                                 <div class="j">
-                                    经: {{ msgData[0].location[0].jing }}
+                                    经: {{ msgOne[0].location[0].jing }}
                                 </div>
                                 <span class="w">
-                                    {{ msgData[0].location[0].wei }}</span
+                                    {{ msgOne[0].location[0].wei }}</span
                                 >
                                 <span
                                     ><img
@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <td>备注信息</td>
-                            <td>{{ msgData[0].remark }}</td>
+                            <td>{{ msgOne[0].remark }}</td>
                         </tr>
                     </table>
                 </div>
@@ -132,12 +132,12 @@
 <script>
 export default {
     props: {
-        msgData: {
+        msgOne: {
             type: Object
         }
     },
     created() {
-        console.log(this.msgData);
+        console.log(this.msgOne);
     }
 };
 </script>

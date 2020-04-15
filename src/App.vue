@@ -1,14 +1,32 @@
 <template>
     <div id="app">
         <!-- <v-header/> -->
-        <router-view />
+        <router-view v-if="isRouterAlive" />
     </div>
 </template>
 
 <script>
 // import header from './components/element/header.vue'
 export default {
-    name: "app"
+    name: "app",
+    provide() {
+        return {
+            reload: this.reload
+        };
+    },
+    data() {
+        return {
+            isRouterAlive: true
+        };
+    },
+    methods: {
+        reload() {
+            this.isRouterAlive = flase;
+            this.$nextTick(function() {
+                this.isRouterAlive = true;
+            });
+        }
+    }
     // components: {
     //     'v-header': header
     // }

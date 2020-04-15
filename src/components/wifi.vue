@@ -6,7 +6,6 @@
         </div>
         <div class="body">
             <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapWifi></v-mapWifi>
         </div>
     </div>
 </template>
@@ -15,7 +14,6 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapWifi from "./element/mapWifi";
 
 export default {
     name: "monitoring",
@@ -23,8 +21,8 @@ export default {
         return {
             device: null,
             config: {
-                name: "video",
-                type: "visual",
+                name: "wifi",
+                type: "wifi",
                 listTitle: "设备总数"
             },
             send: [
@@ -39,15 +37,14 @@ export default {
         "v-header": header,
         "v-loader": loader,
         "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapWifi": mapWifi
+        "v-tips": tips
     },
     created() {
         this.getData();
     },
     methods: {
         getData() {
-            let url = `static/data/visual.json`;
+            let url = `static/data/wifi.json`;
             $http.get(url).then(res => {
                 var d = res.data;
                 this.device = d;

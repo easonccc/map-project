@@ -6,7 +6,6 @@
         </div>
         <div class="body">
             <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapIllumination></v-mapIllumination>
         </div>
     </div>
 </template>
@@ -15,16 +14,15 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapIllumination from "./element/mapIllumination";
 
 export default {
-    name: "monitoring",
+    name: "illumination",
     data() {
         return {
             device: null,
             config: {
-                name: "video",
-                type: "visual",
+                name: "ill",
+                type: "ill",
                 listTitle: "设备总数"
             },
             send: [
@@ -39,15 +37,14 @@ export default {
         "v-header": header,
         "v-loader": loader,
         "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapIllumination": mapIllumination
+        "v-tips": tips
     },
     created() {
         this.getData();
     },
     methods: {
         getData() {
-            let url = `static/data/visual.json`;
+            let url = `static/data/illData.json`;
             $http.get(url).then(res => {
                 var d = res.data;
                 this.device = d;

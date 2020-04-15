@@ -3,8 +3,7 @@
         <div class="dialog">
             <div class="dialog-header">
                 <slot name="header">
-                    <span>修改行驶路线</span>
-                    <span class="lx">上行</span>
+                    <span>投诉详情</span>
                     <button type="button" class="btn-close" @click="close">
                         x
                     </button>
@@ -12,48 +11,60 @@
             </div>
             <div class="dialog-body">
                 <slot name="body">
-                    <div class="line"></div>
-                    <div class="content">
-                        <div class="path_msg">
-                            <div
-                                class="item"
-                                v-for="item in pathData"
-                                :key="item.id"
-                            >
-                                <div class="add">
-                                    <img
-                                        src="../../assets/img/path/添加.png"
-                                        alt=""
-                                    />
+                    <div class="complaint">
+                        <ul class="complaint_content">
+                            <li>
+                                <div class="complaint_name">
+                                    投诉对象:
                                 </div>
-                                <div class="inner">
-                                    {{ item.msg }}
-                                    <div class="path_edit">
-                                        <img
-                                            src="../../assets/img/path/添加 拷贝 21.png"
-                                            alt=""
-                                        />
-                                        <img
-                                            src="../../assets/img/path/编 辑.png"
-                                            alt=""
-                                        />
-                                    </div>
+                                <div class="complaint_name_msg">
+                                    神农顶景区
                                 </div>
-                            </div>
-                            <div class="add_last">
-                                <img
-                                    src="../../assets/img/path/添加.png"
-                                    alt=""
-                                />
-                            </div>
-                        </div>
-                        <div class="footer">
-                            <div class="btn_cancel" @click="close">
-                                取消修改
-                            </div>
-                            <div class="btn_cartain" @click="close">
-                                确定修改
-                            </div>
+                            </li>
+                            <li>
+                                <div class="complaint_name">
+                                    投诉时间:
+                                </div>
+                                <div class="complaint_name_msg">
+                                    2020年02月28日 12:25
+                                </div>
+                            </li>
+                            <li>
+                                <div class="complaint_name">
+                                    投诉分类:
+                                </div>
+                                <div class="complaint_name_msg">
+                                    服务投诉
+                                </div>
+                            </li>
+                            <li>
+                                <div class="complaint_name">
+                                    投诉来源:
+                                </div>
+                                <div class="complaint_name_msg">
+                                    邮件投诉
+                                </div>
+                            </li>
+                            <li>
+                                <div class="complaint_name">
+                                    投诉内容:
+                                </div>
+                                <div class="complaint_name_msg">
+                                    神农顶景区垃圾很多，没有及时处理，影响美观，请及时处理，不热真的很影响旅游体验，建议加多清洁数据，清理垃圾。
+                                </div>
+                            </li>
+                            <li>
+                                <div class="complaint_name">
+                                    投诉处理:
+                                </div>
+                                <div class="complaint_name_msg">
+                                    未处置
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="complaint_footer">
+                            <div class="cancel" @click="close">取消</div>
+                            <div class="dispose" @click="close">处置</div>
                         </div>
                     </div>
                 </slot>
@@ -109,7 +120,7 @@ export default {
     color: #fff;
     padding-left: 5px;
     span {
-        margin: 10px 0 0 5px;
+        margin: 10px 0 0 20px;
     }
     .lx {
         background-color: #00b9fe;
@@ -119,71 +130,43 @@ export default {
 .dialog-body {
     color: #fff;
     position: relative;
-    .line {
-        width: 667px;
-        margin: 14px auto 0;
-        background-color: #3bb5e7;
-        border-radius: 8px;
-        height: 12px;
-    }
-
-    .content {
-        position: relative;
-        color: #3bb5e7;
-        margin-top: 30px;
-        .path_msg {
-            padding: 5px 23px 25px;
-            display: flex;
-            justify-content: space-around;
-            .item {
+    height: 100%;
+    .complaint {
+        ul {
+            margin-top: 80px;
+            margin-left: 30px;
+            li {
                 display: flex;
-                justify-content: space-around;
-                // align-items: center;
-                .add {
-                    margin-top: 50px;
-                    margin-right: 5px;
-                    cursor: pointer;
-                    img {
-                        width: 100%;
+                div {
+                    line-height: 30px;
+                    &:first-child {
+                        width: 90px;
+                    }
+                    &:last-child {
+                        flex: 1;
                     }
                 }
-                .inner {
-                    width: 12px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: 320px;
-                    .path_edit {
-                        img {
-                            margin-bottom: 16px;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-            .add_last {
-                margin-top: 50px;
             }
         }
-        .footer {
+        .complaint_footer {
             position: absolute;
-            right: 10px;
-            bottom: -50px;
+            bottom: 30px;
+            left: 30px;
             display: flex;
-            .btn_cancel,
-            .btn_cartain {
-                width: 100px;
+            div {
+                width: 64px;
                 height: 30px;
                 line-height: 30px;
-                color: #3ab5e9;
-                border: 1px solid #3ab5e9;
                 text-align: center;
-                margin-right: 20px;
+                margin-right: 30px;
+                border-radius: 4px;
                 cursor: pointer;
             }
-            .btn_cartain {
-                background-color: #3ab5e9;
-                color: #fff;
+            .cancel {
+                background-color: #9b999a;
+            }
+            .dispose {
+                background-color: #25b1ca;
             }
         }
     }

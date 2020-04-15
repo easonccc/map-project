@@ -10,12 +10,33 @@
             v-if="config.type === 'video'"
             :deviceOne="bindData[modalIndex]"
             @closeModal="modalHide"
+            :msgOne="msgData"
         ></mapMonitoring>
         <mapBroadcasting
-            v-if="config.type === 'trash'"
+            v-if="config.type === 'broad'"
             :deviceOne="bindData[modalIndex]"
             @closeModal="modalHide"
         ></mapBroadcasting>
+        <mapIllumination
+            v-if="config.type === 'ill'"
+            :deviceOne="bindData[modalIndex]"
+            @closeModal="modalHide"
+        ></mapIllumination>
+        <mapPark
+            v-if="config.type === 'park'"
+            :deviceOne="bindData[modalIndex]"
+            @closeModal="modalHide"
+        ></mapPark>
+        <mapGuide
+            v-if="config.type === 'guide'"
+            :deviceOne="bindData[modalIndex]"
+            @closeModal="modalHide"
+        ></mapGuide>
+        <mapWifi
+            v-if="config.type === 'wifi'"
+            :deviceOne="bindData[modalIndex]"
+            @closeModal="modalHide"
+        ></mapWifi>
         <bottom @childEvent="msgFromChild"></bottom>
     </div>
 </template>
@@ -24,6 +45,11 @@ import video from "../../assets/img/icon/video.png";
 import video2 from "../../assets/img/icon/video2.png";
 import trash from "../../assets/img/icon/trash.png";
 import broad from "../../assets/img/icon/broad.png";
+import ill from "../../assets/img/icon/ill.png";
+import park from "../../assets/img/icon/park.png";
+import guide from "../../assets/img/icon/guide.png";
+import wifi from "../../assets/img/icon/wifi.png";
+
 import commandList from "./commandList";
 // 引入底部导航栏
 import bottom from "../element/bottom";
@@ -31,12 +57,24 @@ import bottom from "../element/bottom";
 import mapMonitoring from "./mapMonitoring";
 // 广播组件
 import mapBroadcasting from "./mapBroadcasting";
+// 照明组件
+import mapIllumination from "./mapIllumination";
+// 停车场组件
+import mapPark from "./mapPark";
+// 导视组件
+import mapGuide from "./mapGuide";
+import mapWifi from "./mapWifi";
 export default {
     components: {
         // 引入左侧导航
         commandList,
         mapMonitoring,
-        bottom
+        bottom,
+        mapPark,
+        mapBroadcasting,
+        mapIllumination,
+        mapGuide,
+        mapWifi
     },
     name: "commmandMap",
     data() {
@@ -45,7 +83,11 @@ export default {
                 video: video,
                 trash: trash,
                 video2: video2,
-                broad: broad
+                broad: broad,
+                ill: ill,
+                park: park,
+                guide,
+                wifi
             },
             listTitle: "人员列表",
             modalShow: false, //modal显示隐藏
@@ -70,14 +112,21 @@ export default {
             }
         },
         config: {
-            type: Object,
-            default: function(value) {
+            type: Object
+            /*  default: function(value) {
                 return {
                     name: "video",
                     type: "video",
                     listTitle: "设备列表"
                 };
-            }
+            } */
+        },
+        msgData: {
+            type: Object
+        },
+        // bottom的数据
+        bottomData: {
+            type: Object
         }
     },
     mounted() {
@@ -141,7 +190,7 @@ export default {
             let markers = [];
             for (let i = 0; i < jsonData.length; i++) {
                 let myIcon = new AMap.Icon({
-                    image: that.icon["video"],
+                    image: that.icon[device[i].type],
                     size: new AMap.Size(40, 40)
                 });
                 let marker = new AMap.Marker({

@@ -5,8 +5,13 @@
             <v-tips :send-val="send"></v-tips>
         </div>
         <div class="body">
-            <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapMonitoring :msgData="msgData"></v-mapMonitoring>
+            <v-comamndMap
+                v-if="device"
+                :config="config"
+                :bindData="device"
+                :msgData="msgData"
+            />
+            <!-- <v-mapMonitoring :msgData="msgData"></v-mapMonitoring> -->
         </div>
     </div>
 </template>
@@ -15,7 +20,7 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapMonitoring from "./element/mapMonitoring";
+// import mapMonitoring from "./element/mapMonitoring";
 
 export default {
     name: "monitoring",
@@ -24,7 +29,7 @@ export default {
             device: null,
             config: {
                 name: "video",
-                type: "visual",
+                type: "video",
                 listTitle: "设备总数"
             },
             send: [
@@ -40,8 +45,8 @@ export default {
         "v-header": header,
         "v-loader": loader,
         "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapMonitoring": mapMonitoring
+        "v-tips": tips
+        // "v-mapMonitoring": mapMonitoring
     },
     created() {
         this.getData();

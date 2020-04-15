@@ -15,7 +15,6 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapGuide from "./element/mapGuide";
 
 export default {
     name: "monitoring",
@@ -23,8 +22,8 @@ export default {
         return {
             device: null,
             config: {
-                name: "video",
-                type: "visual",
+                name: "guide",
+                type: "guide",
                 listTitle: "设备总数"
             },
             send: [
@@ -39,15 +38,14 @@ export default {
         "v-header": header,
         "v-loader": loader,
         "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapGuide": mapGuide
+        "v-tips": tips
     },
     created() {
         this.getData();
     },
     methods: {
         getData() {
-            let url = `static/data/visual.json`;
+            let url = `static/data/guide.json`;
             $http.get(url).then(res => {
                 var d = res.data;
                 this.device = d;

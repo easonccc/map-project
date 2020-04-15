@@ -64,7 +64,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: "ill",
+    props: {
+        deviceOne: {
+            type: Object
+        }
+    }
+};
 </script>
 
 <style scoped lang="less">

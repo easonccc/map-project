@@ -85,6 +85,12 @@
 <script>
 import dialog from "../event/dialog1";
 export default {
+    name: "mapPark",
+    props: {
+        deviceOne: {
+            type: Object
+        }
+    },
     data() {
         return {
             isDialogVisible: false

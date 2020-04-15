@@ -7,7 +7,6 @@
         </div>
         <div class="body">
             <v-comamndMap v-if="device" :config="config" :bindData="device" />
-            <v-mapBroadcasting></v-mapBroadcasting>
         </div>
     </div>
 </template>
@@ -16,7 +15,6 @@ import header from "./element/header.vue";
 import loader from "./element/loader.vue";
 import comamndMap from "./element/commandMap.vue";
 import tips from "./element/tips.vue";
-import mapBroadcasting from "./element/mapbroadcasting";
 
 export default {
     name: "broadcasting",
@@ -40,15 +38,15 @@ export default {
         "v-header": header,
         "v-loader": loader,
         "v-comamndMap": comamndMap,
-        "v-tips": tips,
-        "v-mapBroadcasting": mapBroadcasting
+        "v-tips": tips
+        // "v-mapBroadcasting": mapBroadcasting
     },
     created() {
         this.getData();
     },
     methods: {
         getData() {
-            let url = `static/data/visual.json`;
+            let url = `static/data/broadData.json`;
             $http.get(url).then(res => {
                 var d = res.data;
                 this.device = d;
