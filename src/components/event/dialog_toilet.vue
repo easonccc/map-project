@@ -15,7 +15,62 @@
                         木鱼镇人民路木鱼公园门口公共厕所
                     </div>
                     <div class="toilet_body">
-                        <div class="toilet_left"></div>
+                        <div class="toilet_left">
+                            <!-- 左边男厕区域 -->
+                            <div class="men">
+                                <div class="men_left">
+                                    <ul>
+                                        <li>M1</li>
+                                        <li>M2</li>
+                                        <li>M3</li>
+                                        <li>M4</li>
+                                        <li>M5</li>
+                                        <li>M6</li>
+                                        <li>M7</li>
+                                        <li>M8</li>
+                                    </ul>
+                                </div>
+                                <div class="men_right">
+                                    <ul>
+                                        <li>M9</li>
+                                        <li>M10</li>
+                                        <li>M11</li>
+                                        <li>M12</li>
+                                    </ul>
+                                    <div class="washing">
+                                        <ul>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon">
+                                        <img
+                                            src="../../assets/img/toilet/faucet_left.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div class="men_footer">
+                                    <div class="img">
+                                        <img
+                                            src="../../assets/img/toilet/男厕所.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    男厕
+                                </div>
+                            </div>
+                            <!-- 中间模块--进入 -->
+                            <div class="entrance">
+                                <div class="s">
+                                    <div class="s1">s1</div>
+                                    <div class="s2">s2</div>
+                                </div>
+                            </div>
+                            <!-- 右侧女厕模块 -->
+                            <div class="women"></div>
+                        </div>
                         <div class="toilet_right">
                             <div class="time">
                                 03年05日 周一 12:15
@@ -199,9 +254,84 @@ export default {
         .toilet_left {
             flex: 1;
             height: 618px;
-            border: 1px solid #000;
+            border: 1px solid #6793a4;
+            border-bottom: none;
             margin-top: 30px;
             margin-left: 26px;
+            display: flex;
+            .men {
+                position: relative;
+                width: 280px;
+                display: flex;
+                justify-content: space-between;
+                .men_left,
+                .men_right {
+                    ul {
+                        li {
+                            height: 60px;
+                            width: 60px;
+                            font-size: 24px;
+                            background-color: #e1342a;
+                            margin-bottom: 5px;
+                            line-height: 60px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .men_right {
+                    height: 510px;
+                    border-right: 1px solid #6793a4;
+                    .washing {
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        ul {
+                            width: 22px;
+                            li {
+                                width: 22px;
+                                height: 60px;
+                                background-color: #38b6e7;
+                            }
+                        }
+                    }
+                    .icon {
+                        text-align: right;
+                        margin-top: 13px;
+                    }
+                }
+                .men_footer {
+                    font-size: 30px;
+                    width: 280px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #6793a4;
+                    color: #45b8ba;
+                    position: absolute;
+                    bottom: 0;
+                    padding-bottom: 24px;
+                    left: 0;
+                    .img {
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .entrance {
+                width: 208px;
+                .s {
+                    display: flex;
+                    justify-content: space-between;
+                    div {
+                        height: 60px;
+                        width: 60px;
+                        background-color: #11e64e;
+                        font-size: 24px;
+                        text-align: center;
+                        line-height: 60px;
+                    }
+                }
+            }
         }
         .toilet_right {
             width: 432px;
