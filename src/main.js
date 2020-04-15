@@ -16,24 +16,7 @@ import {
 
 Vue.filter('formatDate', formatDate);
 
-//element 时间选择器
-import {
-    Button,
-    Row,
-    Col,
-    Message,
-    Icon,
-    Input,
-    Dialog,
-    Popover,
-    DatePicker,
-    Select,
-    Option,
-    TableColumn,
-    Table,
-    Radio
-    // MessageBox
-} from 'element-ui';
+import './ui/elementui.js'
 
 //echart 主题文件
 import 'echarts/theme/macarons.js'
@@ -43,22 +26,6 @@ import './assets/css/common.less'
 import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
-Vue.use(Button);
-Vue.use(Row);
-Vue.use(Col);
-Vue.use(Icon);
-Vue.use(Input);
-Vue.use(Popover);
-Vue.use(Dialog);
-Vue.use(TableColumn)
-Vue.use(DatePicker)
-Vue.use(Select)
-Vue.use(Option)
-Vue.use(Table)
-Vue.use(Radio)
-// Vue.use(MessageBox)
-
-Vue.prototype.$message = Message;
 
 /* eslint-disable no-new */
 new Vue({

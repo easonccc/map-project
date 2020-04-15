@@ -91,8 +91,17 @@
                 <div class="video_main"></div>
                 <div class="video_nav">
                     <ul>
-                        <li>
-                            <img src="../../assets/img/video/静音.png" alt="" />
+                        <li @click="toggleImg">
+                            <img
+                                v-if="!showImg"
+                                src="../../assets/img/video/静音.png"
+                                alt=""
+                            />
+                            <img
+                                v-if="showImg"
+                                src="../../assets/img/video/静音(1).png"
+                                alt=""
+                            />
                             静音
                         </li>
                         <li>
@@ -135,6 +144,18 @@
                             录制
                         </li>
                     </ul>
+                    <!-- <ul>
+                        <li
+                            @click="toggleImg(index)"
+                            v-for="(item, index) in navData"
+                            :key="index"
+                            :class="index"
+                        >
+                            <img v-if="!showImg" :src="item.src1" alt="" />
+                            <img v-else :src="item.src2" alt="" />
+                            {{ item.title }}
+                        </li>
+                    </ul> -->
                 </div>
             </div>
             <div class="video_right">
@@ -219,11 +240,62 @@
 </template>
 
 <script>
+/* import mute1 from "../../assets/img/video/静音.png";
+import mute2 from "../../assets/img/video/静音(1).png";
+import camera1 from "../../assets/img/video/形状 578.png";
+import camera2 from "../../assets/img/video/形状 578(1).png";
+import win1 from "../../assets/img/video/窗口(1).png";
+import win2 from "../../assets/img/video/窗口.png";
+import end from "../../assets/img/video/挂电话.png";
+import add from "../../assets/img/video/添加成员.png";
+import all1 from "../../assets/img/video/全员静音-01.png";
+import all2 from "../../assets/img/video/全员静音-01(1).png";
+import recording1 from "../../assets/img/video/录制(1).png";
+import recording2 from "../../assets/img/video/录制.png"; */
+
 import dialog from "../event/dialog_video";
 export default {
     data() {
         return {
-            isDialogVisible: false
+            isDialogVisible: false,
+            showImg: false
+            /*  navData: [
+                {
+                    title: "静音",
+                    src1: mute1,
+                    src2: mute2
+                },
+                {
+                    title: "开启摄像头",
+                    src1: camera1,
+                    src2: camera2
+                },
+                {
+                    title: "共享窗口",
+                    src1: win1,
+                    src2: win2
+                },
+                {
+                    title: "结束会议",
+                    src1: end,
+                    src2: end
+                },
+                {
+                    title: "加入成员",
+                    src1: add,
+                    src2: add
+                },
+                {
+                    title: "全员静音",
+                    src1: all1,
+                    src2: all2
+                },
+                {
+                    title: "录制",
+                    src1: recording1,
+                    src2: recording2
+                }
+            ] */
         };
     },
     methods: {
@@ -232,6 +304,9 @@ export default {
         },
         closeDialog() {
             this.isDialogVisible = false;
+        },
+        toggleImg(id) {
+            this.showImg = !this.showImg;
         }
     },
     components: {
@@ -394,6 +469,7 @@ export default {
                         justify-content: center;
                         text-align: center;
                         margin-right: 39px;
+                        cursor: pointer;
                         img {
                             margin-bottom: 11px;
                         }

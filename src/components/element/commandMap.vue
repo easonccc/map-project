@@ -168,7 +168,7 @@ export default {
                 zoom: 0,
                 layers: [
                     //使用多个图层
-                    // new AMap.TileLayer.Satellite(), // 卫星
+                    new AMap.TileLayer.Satellite(), // 卫星
                     new AMap.TileLayer.RoadNet() // 路网
                 ]
             });
