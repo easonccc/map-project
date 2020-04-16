@@ -442,6 +442,7 @@ export default {
                     text-align: left;
                     outline: none;
                     resize: none;
+                    color: #fff;
                 }
             }
         }

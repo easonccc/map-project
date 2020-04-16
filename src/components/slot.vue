@@ -62,11 +62,8 @@ export default {
         // 获取底部导航栏图标
         async getIconData() {
             let url = `static/data/sot.json`;
-            const data = await $http.get(url);
-            this.$store.dispatch("changeSot", { data });
-            this.$store.dispatch("changeModel", {
-                type: "sot"
-            });
+            const { data: res } = await $http.get(url);
+            this.$store.dispatch("changeMsgData", { res });
         }
     }
 };

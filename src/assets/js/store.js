@@ -11,29 +11,18 @@ const store = new Vuex.Store({
             title: "旅游大数据中心",
             type: "tourism"
         },
-        sot: [],
-        city: [],
-        system: [],
+        msgData: [],
         model: null
     },
     getters: {
-        getType: function(state) {
+        getType: function (state) {
             if (!state.type) {
                 state.type = localStorage.getItem("type");
             }
             return state.type;
         },
-        getSot: function(state) {
-            return state.sot.data;
-        },
-        getCity: function(state) {
-            return state.city.data;
-        },
-        getSystem: function(state) {
-            return state.system.data;
-        },
-        getModel: function(state) {
-            return state.model;
+        getMsgData: function (state) {
+            return state.msgData
         }
     },
     mutations: {
@@ -47,39 +36,18 @@ const store = new Vuex.Store({
             console.log(state, organ); //state对象
             state.organ = organ;
         },
-        changeSot(state, all) {
-            // 修改sot里面的参数
-            state.sot = all;
-            sessionStorage.setItem("sot", JSON.stringify(all));
-        },
-        changeCity(state, all) {
-            state.city = all;
-            sessionStorage.setItem("city", JSON.stringify(all));
-        },
-        changeSystem(state, all) {
-            state.system = all;
-            sessionStorage.setItem("system", JSON.stringify(all));
-        },
-        changeModel(state, type) {
-            state.model = type;
-            sessionStorage.setItem("model", JSON.stringify(type));
+        changeMsgData(state, data) {
+            state.msgData = data
         }
     },
     actions: {
         /* increment({commit}){
            commit("INCREMENT")
          }*/
-        changeSot({ commit }, data) {
-            commit("changeSot", data);
-        },
-        changeCity({ commit }, data) {
-            commit("changeCity", data);
-        },
-        changeSystem({ commit }, data) {
-            commit("changeSystem", data);
-        },
-        changeModel({ commit }, data) {
-            commit("changeModel", data);
+        changeMsgData({
+            commit
+        }, data) {
+            commit("changeMsgData", data)
         }
     }
 });

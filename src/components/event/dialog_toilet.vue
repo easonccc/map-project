@@ -67,9 +67,107 @@
                                     <div class="s1">s1</div>
                                     <div class="s2">s2</div>
                                 </div>
+                                <!-- 中间的 "专用"  -->
+                                <div class="use">
+                                    <img
+                                        src="../../assets/img/toilet/残疾人设施.png"
+                                        alt=""
+                                    />
+
+                                    <div class="text">
+                                        专用
+                                    </div>
+                                </div>
+                                <!-- 水龙头 -->
+                                <div class="tap">
+                                    <div class="img_first">
+                                        <img
+                                            src="../../assets/img/toilet/faucet_left.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="img_seccond">
+                                        <img
+                                            src="../..//assets/img/toilet/faucet_left.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="img_third">
+                                        <img
+                                            src="../..//assets/img/toilet/faucet_left.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="../..//assets/img/toilet/faucet_left.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <!-- 底部的入口文字 -->
+                                <div class="entrance_text">
+                                    入口
+                                </div>
                             </div>
                             <!-- 右侧女厕模块 -->
-                            <div class="women"></div>
+                            <div class="women">
+                                <div class="women_left">
+                                    <ul class="women_box">
+                                        <li>F1</li>
+                                        <li>F2</li>
+                                        <li>F3</li>
+                                        <li>F4</li>
+                                    </ul>
+                                    <div class="washing">
+                                        <ul>
+                                            <li>
+                                                <img
+                                                    src="../../assets/img/toilet/faucet_right.png"
+                                                    alt=""
+                                                />
+                                            </li>
+                                            <li>
+                                                <img
+                                                    src="../../assets/img/toilet/faucet_right.png"
+                                                    alt=""
+                                                />
+                                            </li>
+                                            <li>
+                                                <img
+                                                    src="../../assets/img/toilet/faucet_right.png"
+                                                    alt=""
+                                                />
+                                            </li>
+                                            <li>
+                                                <img
+                                                    src="../../assets/img/toilet/faucet_right.png"
+                                                    alt=""
+                                                />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="women_right">
+                                    <ul>
+                                        <li>F5</li>
+                                        <li>F6</li>
+                                        <li>F7</li>
+                                        <li>F8</li>
+                                        <li>F9</li>
+                                        <li>F10</li>
+                                        <li>F11</li>
+                                        <li>F12</li>
+                                    </ul>
+                                </div>
+                                <div class="women_footer">
+                                    <div class="img">
+                                        <img
+                                            src="../../assets/img/toilet/女厕.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    女厕
+                                </div>
+                            </div>
                         </div>
                         <div class="toilet_right">
                             <div class="time">
@@ -318,6 +416,7 @@ export default {
                 }
             }
             .entrance {
+                position: relative;
                 width: 208px;
                 .s {
                     display: flex;
@@ -329,6 +428,114 @@ export default {
                         font-size: 24px;
                         text-align: center;
                         line-height: 60px;
+                    }
+                }
+                .use {
+                    display: flex;
+                    font-size: 30px;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 45px;
+                    .text {
+                        padding-top: 2px;
+                        margin-left: 11px;
+                    }
+                }
+                .tap {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    flex-wrap: wrap;
+                    div {
+                        width: 128px;
+                    }
+                    .img_first {
+                        padding: 24px 0 6px 0;
+                        display: flex;
+                        justify-content: center;
+                        border-bottom: 1px solid #349dc9;
+                    }
+                    .img_seccond {
+                        border-bottom: 1px solid #349dc9;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        padding: 45px 7px 38px 0;
+                    }
+                    .img_third {
+                        margin-top: 28px;
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                }
+                .entrance_text {
+                    font-size: 30px;
+                    width: 280px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #45b8ba;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .women {
+                display: flex;
+                position: relative;
+                justify-content: space-between;
+                width: 282px;
+                .women_left {
+                    height: 510px;
+                    border-left: 1px solid #6793a4;
+                    ul.women_box {
+                        li {
+                            height: 60px;
+                            width: 60px;
+                            font-size: 24px;
+                            background-color: #e1342a;
+                            margin-bottom: 5px;
+                            line-height: 60px;
+                            text-align: center;
+                        }
+                    }
+                    .washing {
+                        margin-top: 40px;
+                        ul {
+                            li {
+                                margin: 0 0 30px 7px;
+                            }
+                        }
+                    }
+                }
+                .women_right {
+                    ul {
+                        li {
+                            height: 60px;
+                            width: 60px;
+                            background-color: #0fe84d;
+                            margin-bottom: 5px;
+                            line-height: 60px;
+                            text-align: center;
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .women_footer {
+                    font-size: 30px;
+                    width: 280px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #6793a4;
+                    color: #d620e1;
+                    position: absolute;
+                    bottom: 0;
+                    padding-bottom: 24px;
+                    left: 0;
+                    .img {
+                        margin-right: 15px;
                     }
                 }
             }

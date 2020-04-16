@@ -2,12 +2,13 @@
     <!-- 底部导航区域 -->
     <div class="box-bottom">
         <div class="title">
-            {{ swiperData[0].title }}
+            <!-- {{ swiperData[0].title }} -->
+            {{ getMsgData.res[0].name }}
         </div>
         <div class="content">
             <swiper ref="mySwiper" :options="swiperOptions">
                 <swiper-slide
-                    v-for="(item, index) in swiperData"
+                    v-for="(item, index) in getMsgData.res[0].swiperData"
                     @click.stop="sendMsgToParent(index, item.type)"
                     :key="index"
                 >
@@ -129,6 +130,7 @@ export default {
     },
     computed: {
         // ...mapGetters(["getSot"], ["getModel"])
+        ...mapGetters(["getMsgData"])
     },
     created() {
         this.getType();
