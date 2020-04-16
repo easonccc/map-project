@@ -65,6 +65,13 @@ import emergency from "@/components/emergency";
 // 引入视频会议
 import videoconferencing from '@/components/videoconferencing'
 
+
+// 引入智慧文旅模块
+import travel from '@/components/travel'
+// 引入诚信信息
+import credit from '@/components/credit'
+// 引入票务模块
+import ticket from '@/components/ticket'
 Vue.use(Router);
 
 export default new Router({
@@ -141,6 +148,21 @@ export default new Router({
             path: "/slot",
             name: "slot",
             component: slot
+        },
+        {
+            path: "/travel",
+            name: "travel",
+            component: travel
+        },
+        {
+            path: "/credit",
+            name: "credit",
+            component: credit
+        },
+        {
+            path: "/ticket",
+            name: "ticket",
+            component: ticket
         },
         {
             path: "/traffic",

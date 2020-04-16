@@ -164,6 +164,35 @@
                 </li>
             </ul>
         </div>
+        <!--  <el-tabs
+            class="tabs"
+            v-model="activeName"
+            typr="card"
+            :tab-position="tabPosition"
+        >
+            <el-tab-pane name="first">
+                <div slot="label">
+                    <img
+                        src="../../assets/img/monitoring/rectangle.png"
+                        alt=""
+                    />
+                </div>
+                用户管理</el-tab-pane
+            >
+            <el-tab-pane name="second">
+                <div slot="label">
+                    <img
+                        src="../../assets/img/monitoring/rectangle.png"
+                        alt=""
+                    />
+                </div>
+                配置管理</el-tab-pane
+            >
+            <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
+            <el-tab-pane label="定时任务补偿" name="fourth"
+                >定时任务补偿</el-tab-pane
+            >
+        </el-tabs> -->
     </div>
 </template>
 
@@ -173,7 +202,9 @@
 export default {
     data() {
         return {
-            isSlot: true
+            isSlot: false,
+            activeName: "first",
+            tabPosition: "left"
         };
     },
     props: {
@@ -314,6 +345,12 @@ export default {
             background: rgba(65, 68, 76, 1);
             margin: 20px 0;
         }
+    }
+    .tabs {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 134px;
     }
 }
 </style>

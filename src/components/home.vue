@@ -29,7 +29,7 @@
                     <span>智慧城市</span>
                     <img src="../assets/img/组 3(2).png" alt="" />
                 </li>
-                <li>
+                <li @click="goTravel">
                     <span>智慧文旅</span>
                     <img src="../assets/img/组 3(3).png" alt="" />
                 </li>
@@ -77,6 +77,14 @@ export default {
                 path: "/system",
                 query: {
                     type: "system"
+                }
+            });
+        },
+        goTravel() {
+            this.$router.push({
+                path: "/travel",
+                query: {
+                    type: "travel"
                 }
             });
         }

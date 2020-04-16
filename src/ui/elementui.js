@@ -14,7 +14,9 @@ import {
     Option,
     TableColumn,
     Table,
-    Radio
+    Radio,
+    Tabs,
+    TabPane
     // MessageBox
 } from 'element-ui';
 
@@ -31,6 +33,8 @@ Vue.use(Select)
 Vue.use(Option)
 Vue.use(Table)
 Vue.use(Radio)
+Vue.use(Tabs)
+Vue.use(TabPane)
 // Vue.use(MessageBox)
 
 Vue.prototype.$message = Message;

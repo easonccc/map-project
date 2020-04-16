@@ -1,0 +1,26 @@
+[{
+    "type": "travel",
+    "name": "智慧文旅",
+    "swiperData": [{
+            "name": "全部",
+            "src": "../../static/img/visual/all.png",
+            "to": "/home",
+            "type": "travel",
+            "title": "智慧城市"
+        },
+        {
+            "name": "诚信监管",
+            "src": "../../static/img/travel/credit.png",
+            "to": "/credit",
+            "type": "travel",
+            "title": "诚信监管"
+        },
+        {
+            "name": "票务管理",
+            "src": "../../static/img/travel/ticket.png",
+            "to": "/ticket",
+            "type": "travel",
+            "title": "票务管理"
+        }
+    ]
+}]
