@@ -112,6 +112,7 @@ export default {
             .selfserve_content {
                 display: flex;
                 margin-top: 30px;
+                padding-bottom: 30px;
                 .img {
                     margin-left: 39px;
                 }

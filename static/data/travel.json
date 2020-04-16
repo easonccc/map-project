@@ -16,9 +16,30 @@
             "title": "诚信监管"
         },
         {
-            "name": "票务管理",
+            "name": "票务自助机",
             "src": "../../static/img/travel/ticket.png",
             "to": "/ticket",
+            "type": "travel",
+            "title": "票务管理"
+        },
+        {
+            "name": "票务球机",
+            "src": "../../static/img/travel/ticket.png",
+            "to": "/ticket1",
+            "type": "travel",
+            "title": "票务管理"
+        },
+        {
+            "name": "票务闸机",
+            "src": "../../static/img/travel/ticket.png",
+            "to": "/ticket2",
+            "type": "travel",
+            "title": "票务管理"
+        },
+        {
+            "name": "票务中心",
+            "src": "../../static/img/travel/ticket.png",
+            "to": "/ticket3",
             "type": "travel",
             "title": "票务管理"
         }

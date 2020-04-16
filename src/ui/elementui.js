@@ -16,7 +16,8 @@ import {
     Table,
     Radio,
     Tabs,
-    TabPane
+    TabPane,
+    Progress
     // MessageBox
 } from 'element-ui';
 
@@ -35,6 +36,7 @@ Vue.use(Table)
 Vue.use(Radio)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Progress)
 // Vue.use(MessageBox)
 
 Vue.prototype.$message = Message;

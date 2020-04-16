@@ -72,6 +72,12 @@ import travel from '@/components/travel'
 import credit from '@/components/credit'
 // 引入票务模块
 import ticket from '@/components/ticket'
+// 票务摄像
+import ticket_video from '@/components/travel/ticket_video/ticket_video'
+// 票务闸机
+import zj from '@/components/travel/ticket_zj/ticket_zj'
+// 票务中心
+import ticketCenter from '@/components/travel/ticket_center/ticket_center'
 Vue.use(Router);
 
 export default new Router({
@@ -128,6 +134,21 @@ export default new Router({
             path: "/emergency",
             name: "emergency",
             component: emergency
+        },
+        {
+            path: "/ticket1",
+            name: "ticket_video",
+            component: ticket_video
+        },
+        {
+            path: "/ticket2",
+            name: "ticket_video",
+            component: zj
+        },
+        {
+            path: "/ticket3",
+            name: "ticket_video",
+            component: ticketCenter
         },
         {
             path: "/well",
