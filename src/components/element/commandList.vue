@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <div class="close">
+        <div class="close" @click="goHome">
             <img src="../../assets/img/组 21 拷贝.png" alt="" />
         </div>
         <!--右侧导航区域  -->
@@ -226,6 +226,14 @@ export default {
     methods: {
         sendMsgToParent: function(index, type) {
             this.$emit("childEvent", { index, type });
+        },
+        goHome() {
+            this.$router.push({
+                path: "/home",
+                query: {
+                    type: "home"
+                }
+            });
         }
     }
     // components: {
