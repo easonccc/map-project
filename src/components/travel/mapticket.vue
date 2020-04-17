@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>自助机</td>
+                            <td><span class="classify">自助机</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>

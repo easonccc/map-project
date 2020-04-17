@@ -28,11 +28,11 @@
                         </tr>
                         <tr>
                             <td>商品分类</td>
-                            <td>酒店</td>
+                            <td><span class="state">酒店</span></td>
                         </tr>
                         <tr>
                             <td>商户状态</td>
-                            <td>正常营业</td>
+                            <td><span class="classify">正常营业</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>
@@ -132,7 +132,6 @@ export default {
         background-color: rgba(0, 0, 0, 0.6);
         .grade_title {
             height: 40px;
-            background-color: rgba(0, 0, 0, 0.6);
             padding-left: 10px;
             line-height: 40px;
         }
@@ -151,6 +150,7 @@ export default {
         }
         .list_content {
             border: 1px solid #000;
+            border-bottom: none;
             .list_item {
                 display: flex;
                 justify-content: space-between;

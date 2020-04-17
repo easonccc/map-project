@@ -9,7 +9,7 @@
                     <table>
                         <tr>
                             <td>车辆分类</td>
-                            <td>公交</td>
+                            <td><span class="classify">公交</span></td>
                         </tr>
                         <tr>
                             <td>车牌号码</td>
@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <td>车辆状态</td>
-                            <td>上行</td>
+                            <td><span class="state">上行</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>

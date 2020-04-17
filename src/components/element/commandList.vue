@@ -141,7 +141,65 @@
                     <img src="../../assets/img/monitoring/traffic.png" alt="" />
                 </li>
                 <li>
-                    <img src="../../assets/img/monitoring/p.png" alt="" />
+                    <el-popover
+                        placement="right"
+                        width="200"
+                        trigger="hover"
+                        :visible-arrow="false"
+                        popper-class="inode"
+                    >
+                        <div class="popover_content">
+                            <!-- 点位统计 -->
+                            <div class="inode_title">
+                                <div class="img">
+                                    <img
+                                        src="../../assets/img/visual/组 1 拷贝.png"
+                                        alt=""
+                                    />
+                                </div>
+                                点位统计
+                            </div>
+                            <div class="inode_content">
+                                <ul>
+                                    <li>
+                                        <div class="inode_name">
+                                            当前区域设备总数:
+                                        </div>
+                                        <div><span>12</span>个</div>
+                                    </li>
+                                    <li>
+                                        <div class="inode_name">
+                                            <div class="img">
+                                                <img
+                                                    src="../../assets/img/visual/组 2 拷贝 18.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            高清摄像头枪机:<span>10</span>个
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inode_name">
+                                            <div class="img">
+                                                <img
+                                                    src="../../assets/img/visual/组 2 拷贝 24.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div>人像识别球机:<span>2</span>个</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img
+                            slot="reference"
+                            src="../../assets/img/monitoring/p.png"
+                            alt=""
+                        />
+                    </el-popover>
                 </li>
             </ul>
             <div class="line"></div>
@@ -164,35 +222,14 @@
                 </li>
             </ul>
         </div>
-        <!--  <el-tabs
-            class="tabs"
-            v-model="activeName"
-            typr="card"
-            :tab-position="tabPosition"
-        >
-            <el-tab-pane name="first">
-                <div slot="label">
-                    <img
-                        src="../../assets/img/monitoring/rectangle.png"
-                        alt=""
-                    />
+        <div class="text_thumbnail">
+            <el-popover placement="right" width="400" trigger="hover">
+                <div class="popover_content">
+                    显示文字
                 </div>
-                用户管理</el-tab-pane
-            >
-            <el-tab-pane name="second">
-                <div slot="label">
-                    <img
-                        src="../../assets/img/monitoring/rectangle.png"
-                        alt=""
-                    />
-                </div>
-                配置管理</el-tab-pane
-            >
-            <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-            <el-tab-pane label="定时任务补偿" name="fourth"
-                >定时任务补偿</el-tab-pane
-            >
-        </el-tabs> -->
+                <el-button>click 激活</el-button>
+            </el-popover>
+        </div>
     </div>
 </template>
 
@@ -204,7 +241,11 @@ export default {
         return {
             isSlot: false,
             activeName: "first",
-            tabPosition: "left"
+            tabPosition: "left",
+            popperOptions: {
+                boundariesElement: "body",
+                gpuAcceleration: false
+            }
         };
     },
     props: {
@@ -253,12 +294,12 @@ export default {
 
 .box-left {
     position: absolute;
-    left: 0;
+    left: -30px;
     top: 0;
-    margin-top: 134px;
     width: 297px;
     z-index: 100;
     background: rgba(0, 0, 0, 0.3) !important;
+    transform: scale(0.8);
 }
 .device {
     background: rgba(0, 0, 0, 0.3) !important;
@@ -340,6 +381,32 @@ export default {
                 justify-content: center;
                 align-items: center;
                 margin: 0 0 20px;
+                .popover_content {
+                    height: 650px;
+                    padding: 40px;
+                    .inode_title {
+                        display: flex;
+
+                        .img {
+                            img {
+                            }
+                        }
+                    }
+
+                    .inode_content {
+                        ul {
+                            li {
+                                .inode_name {
+                                }
+
+                                div {
+                                    span {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .arrow {
@@ -353,12 +420,6 @@ export default {
             background: rgba(65, 68, 76, 1);
             margin: 20px 0;
         }
-    }
-    .tabs {
-        position: absolute;
-        left: 0;
-        top: 0;
-        margin-top: 134px;
     }
 }
 </style>

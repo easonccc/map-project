@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>人像球机</td>
+                            <td><span class="classify">人像球机</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>
@@ -117,10 +117,6 @@
                     </div>
                 </div>
             </div>
-            <div class="start_btn">
-                启动预案
-            </div>
-
             <div class="start_btn">
                 启动预案
             </div>

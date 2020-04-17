@@ -37,6 +37,7 @@
             :deviceOne="bindData[modalIndex]"
             @closeModal="modalHide"
         ></mapWifi>
+
         <bottom @childEvent="msgFromChild"></bottom>
     </div>
 </template>

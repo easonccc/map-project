@@ -13,7 +13,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>地下</td>
+                            <td><span class="classify">地下</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

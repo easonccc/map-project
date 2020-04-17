@@ -13,11 +13,15 @@
                         </tr>
                         <tr>
                             <td>人员职位</td>
-                            <td>保安</td>
+                            <td><span class="purple">保安</span></td>
                         </tr>
                         <tr>
                             <td>设备名称</td>
-                            <td>移动端</td>
+                            <td>移动智能巡检设备</td>
+                        </tr>
+                        <tr>
+                            <td>设备分类</td>
+                            <td><span class="classify">移动端</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

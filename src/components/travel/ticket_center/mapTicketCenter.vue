@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>窗口售票</td>
+                            <td><span class="classify">窗口售票</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>

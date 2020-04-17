@@ -13,7 +13,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>智慧消防栓</td>
+                            <td><span class="classify">智能消防栓</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

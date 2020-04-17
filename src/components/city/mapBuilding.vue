@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>电梯</td>
+                            <td><span class="state">电梯</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>

@@ -8,11 +8,11 @@
                 <div class="msg_content">
                     <table>
                         <tr>
-                            <td>设备名称</td>
+                            <td>设备名称:</td>
                             <td>天燕小区25栋一单元电梯</td>
                         </tr>
                         <tr>
-                            <td>位置信息</td>
+                            <td>位置信息:</td>
                             <td class="desc">
                                 <div class="roughly">
                                     天燕小区25栋一单元电梯
@@ -27,11 +27,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>设备分类</td>
-                            <td>电梯</td>
+                            <td>设备分类:</td>
+                            <td><span class="state">电梯</span></td>
                         </tr>
                         <tr>
-                            <td>备注信息</td>
+                            <td>备注信息:</td>
                             <td>无</td>
                         </tr>
                     </table>

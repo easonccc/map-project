@@ -9,7 +9,11 @@
                     <table>
                         <tr>
                             <td>设备名称</td>
-                            <td>LED户外大屏</td>
+                            <td>户外大屏</td>
+                        </tr>
+                        <tr>
+                            <td>设备状态</td>
+                            <td><span class="classify">LED户外大屏</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

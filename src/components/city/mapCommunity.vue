@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td>网格分类</td>
-                            <td>游客中心</td>
+                            <td><span class="state">游客中心</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>

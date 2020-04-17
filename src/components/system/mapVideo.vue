@@ -320,8 +320,9 @@ export default {
     background: url(../../assets/img/visual/bgc.png);
     background-size: cover;
     height: 100%;
-    padding: 200px 50px 0;
+    padding: 52px 50px 0;
     .video_content {
+        transform: scale(0.8);
         color: #fff;
         padding-top: 50px;
         padding-left: 40px;

@@ -13,7 +13,11 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>{{ msgOne[0].type }}</td>
+                            <td>
+                                <span class="classify">{{
+                                    msgOne[0].type
+                                }}</span>
+                            </td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

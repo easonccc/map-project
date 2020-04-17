@@ -8,11 +8,11 @@
                 <div class="msg_content">
                     <table>
                         <tr>
-                            <td>绿化名称</td>
+                            <td>绿化名称:</td>
                             <td>木鱼镇公园</td>
                         </tr>
                         <tr>
-                            <td>位置信息</td>
+                            <td>位置信息:</td>
                             <td class="desc">
                                 <div class="roughly">
                                     木鱼镇人民路001号人民政府对面
@@ -27,15 +27,15 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>绿地分类</td>
-                            <td>公园</td>
+                            <td>绿地分类:</td>
+                            <td><span class="green">公园</span></td>
                         </tr>
                         <tr>
-                            <td>种植情况</td>
+                            <td>种植情况:</td>
                             <td>
-                                <span>花园</span>
-                                <span>灌木</span>
-                                <span>树木</span>
+                                <span class="org">花草</span>
+                                <span class="green">灌木</span>
+                                <span class="blue">树木</span>
                             </td>
                         </tr>
                         <tr>

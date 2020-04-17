@@ -13,7 +13,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>AP</td>
+                            <td><span class="classify">AP</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

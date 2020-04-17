@@ -13,7 +13,7 @@
                         </tr>
                         <tr>
                             <td>设备分类</td>
-                            <td>传感器</td>
+                            <td><span class="classify">传感器</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

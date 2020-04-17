@@ -1,19 +1,20 @@
 .right {
-        margin-top: 125px;
         position: absolute;
         right: 10px;
         top: 0;
         color: #8fe1f0;
         font-size: 14px;
-          width: 297px;
+        width: 297px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
 }
 // 第一个 各个模块的信息区域的样式
 .message {
             background-color: rgba(0, 0, 0, 0.6);
-            height: 231px;
             .title {
                 height: 31px;
-
                 background: url(../../assets/img/monitoring/title_background.png);
                 span {
                     display: inline-block;
@@ -33,7 +34,59 @@
 
                      td {
                          line-height: 30px;
-
+                        //  标准状态
+                        .classify {
+                            height: 20px;
+                            line-height: 20px;
+                            padding:0 7px;
+                            background-color: #188ea4;
+                            border-radius: 4px;
+                        }
+                        .purple {
+                             padding:0 7px;
+                             line-height: 20px;
+                             height:20px;
+                            height:20px;
+                            background:rgba(104, 90, 238, 0.8);
+                            border:1px solid rgba(62, 57, 139, 1);
+                            border-radius:4px;
+                            color:rgba(255, 255, 255, 1);
+                        }
+                        .blue{
+                             padding:0 7px;
+                             line-height: 20px;
+                             height:20px;
+                            background:rgba(39, 200, 194, 0.8);
+                            border:1px solid rgba(16, 127, 123, 1);
+                            border-radius:4px;
+                            color:rgba(255, 255, 255, 1);
+                        }
+                        .org {
+                             padding:0 7px;
+                             line-height: 20px;
+                             height:20px;
+                            background:rgba(237, 132, 39, 0.8);
+                            border:1px solid rgba(169, 100, 36, 1);
+                            border-radius:4px;
+                            color:rgba(255, 255, 255, 1);
+                        }
+                        .green{
+                            padding:0 7px;
+                            line-height: 20px;
+                            height:20px;
+                            background:rgba(33, 216, 55, 0.8);
+                            border:1px solid rgba(29, 139, 44, 1);
+                            border-radius:4px;
+                            color:rgba(255, 255, 255, 1);
+                        }
+                        .state{
+                             height: 20px;
+                             line-height: 20px;
+                             padding:0 7px;
+                             background-color: #bec628;
+                             border-radius: 4px;
+                             color:rgba(255, 255, 255, 1);
+                        }
                          span {
                              img {
                                  vertical-align: bottom;

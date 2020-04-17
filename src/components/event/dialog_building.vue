@@ -113,6 +113,7 @@ export default {
     z-index: 9999999;
 }
 .dialog {
+    transform: scale(0.9);
     background: url(../../assets/img/park/park_bg.png);
     background-size: cover;
     width: 1330px;

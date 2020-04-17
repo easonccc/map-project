@@ -1,15 +1,17 @@
 .right {
-  margin-top: 125px;
   position: absolute;
   right: 10px;
   top: 0;
   color: #8fe1f0;
   font-size: 14px;
   width: 297px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 .message {
   background-color: rgba(0, 0, 0, 0.6);
-  height: 231px;
 }
 .message .title {
   height: 31px;
@@ -31,6 +33,57 @@
 }
 .msg_content table tr td {
   line-height: 30px;
+}
+.msg_content table tr td .classify {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 7px;
+  background-color: #188ea4;
+  border-radius: 4px;
+}
+.msg_content table tr td .purple {
+  padding: 0 7px;
+  line-height: 20px;
+  height: 20px;
+  background: rgba(104, 90, 238, 0.8);
+  border: 1px solid #3e398b;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.msg_content table tr td .blue {
+  padding: 0 7px;
+  line-height: 20px;
+  height: 20px;
+  background: rgba(39, 200, 194, 0.8);
+  border: 1px solid #107f7b;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.msg_content table tr td .org {
+  padding: 0 7px;
+  line-height: 20px;
+  height: 20px;
+  background: rgba(237, 132, 39, 0.8);
+  border: 1px solid #a96424;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.msg_content table tr td .green {
+  padding: 0 7px;
+  line-height: 20px;
+  height: 20px;
+  background: rgba(33, 216, 55, 0.8);
+  border: 1px solid #1d8b2c;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.msg_content table tr td .state {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 7px;
+  background-color: #bec628;
+  border-radius: 4px;
+  color: #ffffff;
 }
 .msg_content table tr td span img {
   vertical-align: bottom;

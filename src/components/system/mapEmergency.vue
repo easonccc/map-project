@@ -654,8 +654,9 @@ export default {
     background: url(../../assets/img/visual/bgc.png);
     background-size: cover;
     height: 100%;
-    padding: 130px 50px 0;
+    padding: 20px 0px 0;
     .emergency_content {
+        transform: scale(0.8);
         color: #fff;
         padding-left: 40px;
         width: 1885px;

@@ -13,7 +13,7 @@
                         </tr>
                         <tr>
                             <td>交通状态</td>
-                            <td>畅通</td>
+                            <td><span class="classify">畅通</span></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>

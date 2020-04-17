@@ -88,6 +88,7 @@ export default {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transform: scale(0.9);
 }
 .dialog-header,
 .dialog-footer {

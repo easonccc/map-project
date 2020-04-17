@@ -17,7 +17,7 @@
                         </tr>
                         <tr>
                             <td>位置分类</td>
-                            <td>景区类</td>
+                            <td><span class="classify">景区类</span></td>
                         </tr>
                         <tr>
                             <td>位置信息</td>

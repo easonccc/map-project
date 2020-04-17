@@ -28,11 +28,11 @@
                         </tr>
                         <tr>
                             <td>厕所分类</td>
-                            <td>固定厕所</td>
+                            <td><span class="classify">固定厕所</span></td>
                         </tr>
                         <tr>
                             <td>运行状态</td>
-                            <td>正常</td>
+                            <td><sapn class="blue">正常</sapn></td>
                         </tr>
                         <tr>
                             <td>备注信息</td>
