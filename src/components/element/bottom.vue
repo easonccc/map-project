@@ -22,23 +22,13 @@
             </swiper>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            {{ getModel }}
         </div>
     </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide, directive, Pagination } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
-
-// 引入js图片
-import all from "../../assets/img/visual/all.png";
-import surveillance from "../../assets/img/visual/surveillance.png";
-import broadcast from "../../assets/img/visual/broadcast.png";
-import lamp from "../../assets/img/visual/lamp.png";
-import park from "../../assets/img/visual/park.png";
-import guide from "../../assets/img/visual/guide.png";
-import wifi from "../../assets/img/visual/wifi.png";
+import "swiper/dist/css/swiper.css";
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 import { mapActions, mapGetters } from "vuex";
 export default {
@@ -46,10 +36,8 @@ export default {
     data() {
         return {
             swiperOptions: {
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev"
-                },
+                prevButtton: ".swiper-button-prev",
+                nextButton: ".swiper-button-next",
                 // spaceBetween: 0,
                 // virtual: true,
                 // 不循环
@@ -125,45 +113,12 @@ export default {
         };
     },
     components: {
-        Swiper,
-        SwiperSlide
+        swiper,
+        swiperSlide
     },
     computed: {
         // ...mapGetters(["getSot"], ["getModel"])
         ...mapGetters(["getMsgData"])
-    },
-    created() {
-        this.getType();
-        console.log("ok");
-    },
-    methods: {
-        // 获取数据
-        getType() {
-            if (JSON.parse(sessionStorage.getItem("model")).type === "sot") {
-                this.swiperData = JSON.parse(
-                    sessionStorage.getItem("sot")
-                ).data.data[0].swiperData;
-                console.log("1111");
-            } else if (
-                JSON.parse(sessionStorage.getItem("model")).type === "city"
-            ) {
-                this.swiperData = JSON.parse(
-                    sessionStorage.getItem("city")
-                ).data.data[0].swiperData;
-                console.log("222");
-            } else if (
-                JSON.parse(sessionStorage.getItem("model")).type === "system"
-            ) {
-                this.swiperData = JSON.parse(
-                    sessionStorage.getItem("system")
-                ).data.data[0].swiperData;
-                console.log("333");
-            }
-        },
-        // 向父组件commondMap传递当前点击的索引等
-        sendMsgToParent: function(index, type) {
-            this.$emit("childEvent", { index, type });
-        }
     }
 };
 </script>
