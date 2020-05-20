@@ -1,0 +1,41 @@
+[{
+    "type": "system",
+    "name": "系统应用",
+    "swiperData": [{
+            "name": "应急通知",
+            "src": "../img/visual/emergency.png",
+            "to": "/emergency",
+            "type": "system"
+        },
+        {
+            "name": "视频会议",
+            "src": "../img/visual/video.png",
+            "to": "/videoconferencing",
+            "type": "system"
+        },
+        {
+            "name": "信息发布",
+            "src": "../img/visual/msg.png",
+            "to": "/publish",
+            "type": "system"
+        },
+        {
+            "name": "巡检执法",
+            "src": "../img/visual/polling.png",
+            "to": "/polling",
+            "type": "system"
+        },
+        {
+            "name": "投诉处置",
+            "src": "../img/visual/complaint.png",
+            "to": "/complaint",
+            "type": "system"
+        },
+        {
+            "name": "舆情监测",
+            "src": "../img/visual/epidemic.png",
+            "to": "/epidemic",
+            "type": "system"
+        }
+    ]
+}]

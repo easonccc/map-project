@@ -1,0 +1,57 @@
+[{
+        "name": "设备总数",
+        "location": [106.45178, 29.580431],
+        "id": 1,
+        "code": 1,
+        "type": "car",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "设备总数",
+        "location": [106.472470, 29.567571],
+        "id": 1,
+        "code": 1,
+        "type": "car",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "设备总数",
+        "location": [106.509437, 29.553179],
+        "id": 1,
+        "code": 1,
+        "type": "car",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "设备总数",
+        "location": [106.55025, 29.566439],
+        "id": 1,
+        "code": 1,
+        "type": "car",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "设备总数",
+        "location": [106.57715, 29.55730],
+        "id": 1,
+        "code": 1,
+        "type": "car",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    }
+
+]

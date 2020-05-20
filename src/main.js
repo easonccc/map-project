@@ -1,37 +1,30 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from "vue";
-import App from "./App";
+import App from "./App.vue";
 import router from "./router";
-
-import "./assets/js/config.js";
-import store from "./assets/js/store";
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
-// import 'swiper/css/swiper.css'
-// Vue.use(VueAwesomeSwiper, /* { default options with global component } ) */
-
-import { formatDate } from "./assets/js/filter.js";
-
-Vue.filter("formatDate", formatDate);
-
-import "./ui/elementui.js";
-
-//echart 主题文件
-import "echarts/theme/macarons.js";
-
-//全局样式
-import "./assets/css/common.less";
-import "element-ui/lib/theme-chalk/index.css";
+import store from "./store";
 
 Vue.config.productionTip = false;
 
-/* eslint-disable no-new */
+import "./utils/config";
+
+import "./assets/js/config";
+import "./assets/css/common.less";
+import "normalize.css/normalize.css";
+
+//引入公共loadder
+import loader from "./components/element/loader";
+Vue.component("v-loader", loader);
+
+// 代码高亮
+import VueHighlightJS from "vue-highlightjs";
+import "highlight.js/styles/atom-one-dark.css";
+
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+Vue.use(ElementUI);
+
 new Vue({
-    el: "#app",
-    router,
-    store,
-    template: "<App/>",
-    components: {
-        App
-    }
-});
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')

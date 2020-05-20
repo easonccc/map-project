@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <!-- 高德地图   -->
+  <script type="text/javascript"
+    src="https://webapi.amap.com/maps?v=1.4.15&key=96143bea5c49cce53f6cd3b009516110&plugin=AMap.PlaceSearch&plugin=AMap.PolyEditor&plugin=AMap.Driving">
+  </script>
+  <!--  echarts  -->
+  <script src="<%= BASE_URL %>lib/echarts-en.min.js"></script>
+  <!--  完整中国地图  -->
+  <script src="<%= BASE_URL %>lib/china.js"></script>
+  <script src="<%= BASE_URL %>lib/echarts-wordcloud.min.js"></script>
+  <script src="<%= BASE_URL %>lib/moment.min.js"></script>
+  <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+  <title>重庆市可视化综合指挥中心</title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+      Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

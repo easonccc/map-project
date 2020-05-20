@@ -34,6 +34,9 @@
 .msg_content table tr td {
   line-height: 30px;
 }
+.msg_content table tr td:first-child {
+  word-wrap: no-warp !important;
+}
 .msg_content table tr td .classify {
   height: 20px;
   line-height: 20px;

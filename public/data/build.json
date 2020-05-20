@@ -1,0 +1,132 @@
+[{
+        "name": "设备总数",
+        "location": [106.45178, 29.580431],
+        "id": 1,
+        "code": 1,
+        "type": "build",
+        "num": 697,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "视频监控设备",
+        "location": [106.4552235600, 29.5812669200],
+        "id": 2,
+        "code": 1,
+        "type": "build",
+        "num": 36,
+        "heigh": 687,
+        "portrait": 10
+    },
+    {
+        "name": "智能广播设备",
+        "location": [106.4500737200, 29.5776559900],
+        "id": 3,
+        "code": 1,
+        "type": "build",
+        "num": 24,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "智能照明设备",
+        "location": [106.4511787900, 29.5850456600],
+        "id": 4,
+        "code": 1,
+        "type": "build",
+        "num": 56,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "智能停车场",
+        "location": [106.452178, 29.5765431],
+        "id": 5,
+        "code": 1,
+        "type": "build",
+        "num": 6,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "智慧导视设备",
+        "location": [106.4478313900, 29.5834875300],
+        "id": 6,
+        "code": 1,
+        "type": "build",
+        "num": 2,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "无线wifi设备",
+        "location": [106.4495694600, 29.5830303500],
+        "id": 7,
+        "code": 1,
+        "type": "build",
+        "num": 16,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "环境监测设备",
+        "location": [106.4523911500, 29.5814721900],
+        "id": 8,
+        "code": 1,
+        "type": "build",
+        "num": 8,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "垃圾桶监测设备",
+        "location": [106.4508998400, 29.5794474800],
+        "id": 9,
+        "code": 1,
+        "type": "build",
+        "num": 12,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "井盖监测设备",
+        "location": [106.4553093900, 29.5795221200],
+        "id": 10,
+        "code": 1,
+        "type": "build",
+        "num": 66,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "防火报警设备",
+        "location": [106.4475524400, 29.5777399700],
+        "id": 11,
+        "code": 1,
+        "type": "build",
+        "num": 54,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    },
+    {
+        "name": "自助报警设备",
+        "location": [106.4476651000, 29.5799186700],
+        "id": 12,
+        "code": 1,
+        "type": "build",
+        "num": 18,
+        "online": 687,
+        "outline": 10,
+        "malfunction": 10
+    }
+]

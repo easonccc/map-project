@@ -149,7 +149,7 @@ html {
 }
 .header {
   position: absolute;
-  top: 40px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;

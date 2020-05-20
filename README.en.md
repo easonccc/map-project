@@ -1,7 +1,7 @@
-# 江永指挥平台
+# 可视化综合指挥平台大屏
 
 #### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+可视化综合指挥平台大屏
 
 #### Software Architecture
 Software architecture description

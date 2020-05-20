@@ -1,0 +1,54 @@
+[{
+    "type": "city",
+    "name": "智慧城市",
+    "swiperData": [{
+            "name": "交通",
+            "src": "../img/visual/traffic.png",
+            "to": "/traffic",
+            "type": "city",
+            "title": "智慧城市"
+        },
+        {
+            "name": "车辆",
+            "src": "../img/visual/vehicle.png",
+            "to": "/vehicle",
+            "type": "city",
+            "title": "智慧城市"
+        },
+        {
+            "name": "社区",
+            "src": "../img/visual/community.png",
+            "to": "/community",
+            "type": "city",
+            "title": "智慧城市"
+        },
+        {
+            "name": "楼宇",
+            "src": "../img/visual/building.png",
+            "to": "/building",
+            "type": "city",
+            "title": "智慧城市"
+        },
+        {
+            "name": "商户",
+            "src": "../img/visual/shop.png",
+            "to": "/shop",
+            "type": "city",
+            "title": "智慧城市"
+        },
+        {
+            "name": "绿化",
+            "src": "../img/visual/afforest.png",
+            "to": "/afforest",
+            "type": "city",
+            "title": "智慧城市"
+        },
+        {
+            "name": "厕所",
+            "src": "../img/visual/toilet.png",
+            "to": "/toilet",
+            "type": "city",
+            "title": "智慧城市"
+        }
+    ]
+}]

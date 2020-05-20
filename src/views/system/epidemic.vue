@@ -1,0 +1,43 @@
+<template>
+  <div class="content">
+    <close></close>
+    <div class="header">
+      <v-header />
+    </div>
+    <div class="body">
+      <v-mapEpidemic></v-mapEpidemic>
+      <bottom></bottom>
+    </div>
+  </div>
+</template>
+<script>
+import header from "@/components/header.vue";
+import mapEpidemic from "@/components/system/mapEpidemic";
+import bottom from "@/components/bottom";
+import close from "@/components/close";
+
+export default {
+  name: "monitoring",
+  data() {
+    return {};
+  },
+  components: {
+    "v-header": header,
+    "v-mapEpidemic": mapEpidemic,
+    bottom,
+    close
+  },
+  created() {},
+  methods: {}
+};
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="less">
+.content {
+  position: relative;
+  .body {
+    margin: 0;
+    padding: 0;
+  }
+}
+</style>

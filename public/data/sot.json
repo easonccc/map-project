@@ -1,0 +1,78 @@
+[{
+  "type": "lot",
+  "name": "物联设备",
+  "swiperData": [{
+      "name": "全部",
+      "src": "../img/visual/all.png",
+      "to": "/slot",
+      "type": "lot",
+      "title": "物联设备"
+    },
+    {
+      "name": "监控",
+      "src": "../img/visual/surveillance.png",
+      "to": "/monitoring",
+      "type": "lot"
+    },
+    {
+      "name": "广播",
+      "src": "../img/visual/broadcast.png",
+      "to": "/broadcasting",
+      "type": "lot"
+    },
+    {
+      "name": "照明",
+      "src": "../img/visual/lamp.png",
+      "to": "/illumination",
+      "type": "lot"
+    },
+    {
+      "name": "停车场",
+      "src": "../img/visual/park.png",
+      "to": "/park",
+      "type": "lot"
+    },
+    {
+      "name": "导视",
+      "src": "../img/visual/guide.png",
+      "to": "/guide",
+      "type": "lot"
+    },
+    {
+      "name": "WiFi",
+      "src": "../img/visual/wifi.png",
+      "to": "/wifi",
+      "type": "lot"
+    },
+    {
+      "name": "环境",
+      "src": "../img/visual/environment.png",
+      "to": "/environment",
+      "type": "lot"
+    },
+    {
+      "name": "垃圾桶信息",
+      "src": "../img/visual/trash.png",
+      "to": "/trash",
+      "type": "lot"
+    },
+    {
+      "name": "井盖信息",
+      "src": "../img/visual/well.png",
+      "to": "/well",
+      "type": "lot"
+    },
+    {
+      "name": "防火监测",
+      "src": "../img/visual/fire.png",
+      "to": "/fireproofing",
+      "type": "lot"
+    },
+    {
+      "name": "自助报警",
+      "src": "../img/visual/alarm.png",
+      "to": "/alarm",
+      "type": "lot"
+    }
+  ]
+}]

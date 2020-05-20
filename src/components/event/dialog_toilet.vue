@@ -12,7 +12,7 @@
             <div class="dialog-body">
                 <slot name="body">
                     <div class="toilet_title">
-                        木鱼镇人民路木鱼公园门口公共厕所
+                     磁器口公共厕所
                     </div>
                     <div class="toilet_body">
                         <div class="toilet_left">
