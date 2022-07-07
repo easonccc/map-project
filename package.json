@@ -15,7 +15,7 @@
     "caniuse-lite": "^1.0.30001042",
     "element-ui": "^2.4.9",
     "es6-promise": "^4.2.4",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "swiper": "^3.4.0",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^2.5.4",
